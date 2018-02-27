@@ -1,49 +1,85 @@
-language: php
+sudo: required
 dist: trusty
-sudo: false
+language: php
 
+cache:
+  bundler: true
+  apt: true
+  directories:
+    - "$HOME/.composer/cache"
+    - "$HOME/.drush/cache"
+    - "$HOME/.npm"
 php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - 7.2
+  - 7.0.22
 
-env:
-  global:
-    - SIMPLETEST_DB=sqlite://tmp/site.sqlite
-    - SIMPLETEST_BASE_URL="http://127.0.0.1:8080"
-  matrix:
-    - RELEASE=stable COMPOSER_CHANNEL=stable
-    - RELEASE=dev COMPOSER_CHANNEL=stable
-    - RELEASE=stable COMPOSER_CHANNEL=snapshot
-
-matrix:
-  exclude:
-    - php: 7.2
-      env: RELEASE=stable COMPOSER_CHANNEL=stable
-    - php: 7.2
-      env: RELEASE=stable COMPOSER_CHANNEL=snapshot
+addons:
+  apt:
+    packages:
+    # Dependencies for Chrome.
+    - libappindicator1
+    - fonts-liberation
 
 before_install:
-  - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - phpenv config-rm xdebug.ini
-  - composer --verbose self-update --$COMPOSER_CHANNEL
+  - composer self-update
   - composer --version
+  # Initialize xvfb (see https://docs.travis-ci.com/user/gui-and-headless-browsers)
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
+  # Download Chrome Driver
+  - LATEST_CHROMEDRIVER=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+  - wget http://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - chmod +x chromedriver
+  - mkdir -p $HOME/.composer/vendor/bin
+  - mv -f chromedriver $HOME/.composer/vendor/bin/
+  - rm chromedriver_linux64.zip
+
+  # Update Chrome.
+  - export CHROME_BIN=/usr/bin/google-chrome
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i google-chrome-stable_current_amd64.deb
+  - rm google-chrome-stable_current_amd64.deb
+  - google-chrome --version
 
 install:
-  - composer --verbose validate
-  - composer --verbose install
+  # Add Composer's local bin directory to the PATH so that we will be running
+  # our installed versions of Drush, PHPCS, Behat, PhantomJS, etc.
+  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
+
+  # composer install should fail on bad patches.
+  - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
+
+  # Create the MySQL database and add a user for testing.
+  - mysql -u root -e "CREATE DATABASE drupal; CREATE USER 'drupal'@'localhost' IDENTIFIED BY 'drupal'; GRANT ALL ON drupal.* TO 'lightning'@'localhost';"
+
+  # Install the PECL YAML extension for strict parsing. yes is used to
+  # acknowledge all prompts.
+  - yes '' | pecl install yaml
+  # Tweak PHP configuration.
+  - echo 'max_execution_time = 120' >> drupal.php.ini;
+  - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
+  - phpenv config-add drupal.php.ini
+  - phpenv rehash
+  - composer install
+  # Install cleanly so that settings.php will be created properly.
+  - drush si install config_installer 'mysql\://drupal:drupal@127.0.0.1/drupal'
+
+before_script:
+  - drush runserver --default-server=builtin 8080 &>/dev/null &
+  - jdk_switcher use oraclejdk8
+  - sleep 5
+  - selenium-server-standalone -port 4444 -log selenium.log &
 
 script:
-  - if [[ $RELEASE = dev ]]; then composer --verbose remove --no-update drupal/console; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose require --no-update drupal/core:8.5.x-dev webflo/drupal-core-require-dev:8.5.x-dev; fi;
-  - if [[ $RELEASE = dev ]]; then composer --verbose update; fi;
-  - cd $TRAVIS_BUILD_DIR/web
-  - ./../vendor/bin/drush site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite
-  - ./../vendor/bin/drush runserver $SIMPLETEST_BASE_URL &
-  - until curl -s $SIMPLETEST_BASE_URL; do true; done > /dev/null
-  # Skip core/tests/Drupal/Tests/ComposerIntegrationTest.php because web/ has no composer.json
-  # Ignore PageCache group temporarily, @see https://www.drupal.org/node/2770673
-  - ./../vendor/bin/phpunit -c core --testsuite unit --exclude-group Composer,DependencyInjection,PageCache
-  - ./../vendor/bin/drush
-  - if [[ $RELEASE = stable ]]; then ./../vendor/bin/drupal; fi;
+  - composer validate composer.json --no-check-all --ansi --no-interaction
+  - cd docroot
+
+after_failure:
+  - cd docroot
+  - drush watchdog:show --count=100 --severity=Error --extended
+
+matrix:
+  fast_finish: true
