@@ -11,6 +11,8 @@ cache:
     - "$HOME/.npm"
 php:
   - 7.0.22
+  - 7.0
+  - 7.1
 
 addons:
   apt:
