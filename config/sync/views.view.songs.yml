@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.song
-    - system.menu.main
   module:
     - node
     - user
@@ -194,9 +193,9 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: all-songs
+      path: songs
       menu:
-        type: normal
+        type: none
         title: Songs
         description: Songs!!
         expanded: false
