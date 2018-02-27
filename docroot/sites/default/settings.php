@@ -789,4 +789,4 @@ $config_directories['sync'] = '../config/sync';
 if (file_exists('/var/www/site-php')) {
     require '/var/www/site-php/rs62/rs62-settings.inc';
 }
-
+unset($settings['install_profile']);
