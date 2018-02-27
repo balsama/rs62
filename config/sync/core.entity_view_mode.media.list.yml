@@ -1,0 +1,14 @@
+uuid: 7001973b-0828-4f38-ad98-4de31db4d4a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'When displayed next to other similar media items.'
+id: media.list
+label: List
+targetEntityType: media
+cache: true
