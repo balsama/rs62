@@ -65,7 +65,7 @@ install:
   - phpenv rehash
   - composer install
   # Install cleanly so that settings.php will be created properly.
-  - drush si install config_installer 'mysql\://drupal:drupal@127.0.0.1/drupal'
+  - drush si install config_installer --db-url=mysql://drupal:drupal@127.0.0.1/drupal --account-pass=admin
 
 before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
