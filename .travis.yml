@@ -66,6 +66,7 @@ install:
   - phpenv config-add drupal.php.ini
   - phpenv rehash
   - composer install
+  - composer update
   - drush si install config_installer --db-url=mysql://drupal:drupal@127.0.0.1/drupal --account-pass=admin --yes
 
 before_script:
