@@ -787,5 +787,6 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 if (file_exists('/var/www/site-php')) {
   include '/var/www/site-php/rs62/rs62-settings.inc';
 }
+$settings['install_profile'] = null;
 
 $config_directories['sync'] = '../config/sync';
