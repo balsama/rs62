@@ -1,0 +1,22 @@
+uuid: c3eb6963-8625-4ae0-9342-9c9ac79dce52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.song
+  module:
+    - text
+id: node.song.body
+field_name: body
+entity_type: node
+bundle: song
+label: Description
+description: 'Enter description of the song, including any progressions, tab, etc.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

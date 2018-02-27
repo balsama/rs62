@@ -1,0 +1,22 @@
+schemas:
+  bootstrap: 8000
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: assets/rs62-128.ico
+  url: 'http://localhost/rs62/docroot/assets/rs62-128.ico'
+  use_default: false
+logo:
+  path: assets/rs62-100.png
+  url: ''
+  use_default: false
+table_responsive: '-1'
+table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+navbar_inverse: 1
+navbar_position: static-top

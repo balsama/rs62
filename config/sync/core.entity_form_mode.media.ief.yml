@@ -1,0 +1,14 @@
+uuid: 7379456c-630f-4a9b-aefb-5614bf105ed6
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'Minimal form for inline creation.'
+id: media.ief
+label: IEF
+targetEntityType: media
+cache: true

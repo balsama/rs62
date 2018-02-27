@@ -1,0 +1,19 @@
+uuid: 94a43002-6413-4405-8ee2-efeebebbc865
+langcode: en
+status: true
+dependencies: {  }
+id: page_creator
+label: 'Basic page creator'
+weight: 9
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'create page content'
+  - 'create url aliases'
+  - 'edit own page content'
+  - 'use text format rich_text'
+  - 'view own unpublished content'
+  - 'view page revisions'

@@ -1,0 +1,20 @@
+uuid: c1d2f67d-63f0-4926-a0a3-10dc5c0ba67f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_song
+field_name: field_song
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

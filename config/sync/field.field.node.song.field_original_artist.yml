@@ -1,0 +1,29 @@
+uuid: 7ac4d264-7049-4f71-bb03-8ee27a4c05f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_original_artist
+    - node.type.song
+    - taxonomy.vocabulary.original_artist
+id: node.song.field_original_artist
+field_name: field_original_artist
+entity_type: node
+bundle: song
+label: 'Original Artist'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      original_artist: original_artist
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

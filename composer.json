@@ -1,0 +1,86 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/bootstrap": "^3.0",
+        "drupal/config_installer": "^1.5",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "~8.5.0",
+        "drupal/lightning_media": "2.x-dev",
+        "drupal/lightning_workflow": "1.x-dev",
+        "drupal/media_entity_audio": "2.0.0-alpha1",
+        "drush/drush": "^9.0.0",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "~8.4"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/libraries/{$name}": ["type:drupal-library"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/config_installer": {
+                "2916090 - Support Drush 9":
+                "https://www.drupal.org/files/issues/drush9-support-2916090-6.patch",
+                "2935426 - Drush 9: Call to undefined function drush_generate_password":
+                "https://www.drupal.org/files/issues/config_installer-drush_9_call_undefined_function_drush_generate_password-2935426-2.patch"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+uuid: 33e9fdb3-50a7-4eb1-90e4-c1873fac4399
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lO5ziR5dVI1PpEeHZsSOfQ-Y7NWihSDKW8-MMf6uoms
+name: 'Free Tags'
+vid: tags
+description: 'Any other tags that this song or content should be grouped under.'
+hierarchy: 0
+weight: 0

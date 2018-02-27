@@ -1,0 +1,14 @@
+uuid: fb79363a-2d2c-4285-b427-944bd6d0c69c
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'Media viewed in lists.'
+id: media.teaser
+label: Teaser
+targetEntityType: media
+cache: true

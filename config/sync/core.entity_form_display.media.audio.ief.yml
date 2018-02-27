@@ -1,0 +1,37 @@
+uuid: a5bd1e7f-ad40-46cc-8409-9aae0c65b102
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.ief
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+_core:
+  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
+id: media.audio.ief
+targetEntityType: media
+bundle: audio
+mode: ief
+content:
+  field_media_audio_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Recording Name - the song title is recorded in the "Title" field above.'
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  status: true
+  uid: true
