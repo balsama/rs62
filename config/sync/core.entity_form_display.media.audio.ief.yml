@@ -46,7 +46,7 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: 'Recording Name - the song title is recorded in the "Title" field above.'
+      placeholder: 'Name of individual recording. Song name is usually recorded by Title above.'
     third_party_settings: {  }
 hidden:
   created: true

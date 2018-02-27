@@ -13,5 +13,5 @@ type: song
 description: 'A song we have or should record.'
 help: ''
 new_revision: true
-preview_mode: 1
-display_submitted: true
+preview_mode: 0
+display_submitted: false
