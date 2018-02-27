@@ -784,8 +784,8 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-if (file_exists('/var/www/site-php/rs62/rs62-settings.inc')) {
-  require '/var/www/site-php/rs62/rs62-settings.inc';
+if (file_exists('/var/www/site-php')) {
+  include '/var/www/site-php/rs62/rs62-settings.inc';
   if (isset($settings['install_profile'])) {
     unset($settings['install_profile']);
   }
