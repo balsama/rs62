@@ -9,3 +9,7 @@ lightning_media: 0.0.0
 lightning_roles: 0.0.0
 media_entity_audio: 2.0.0-alpha1
 media_entity_spotify: 0.0.0
+color: 0.0.0
+big_pipe: 8.5.0-rc1
+search: 0.0.0
+shortcut: 8.5.0-rc1

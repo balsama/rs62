@@ -28,6 +28,7 @@ content:
     region: content
 hidden:
   created: true
+  field_recorded_date: true
   name: true
   thumbnail: true
   uid: true
