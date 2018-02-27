@@ -1,0 +1,54 @@
+uuid: 167ad83b-91ca-4749-8c72-ac9c43f50699
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.song.body
+    - field.field.node.song.field_categories
+    - field.field.node.song.field_original_artist
+    - field.field.node.song.field_song
+    - node.type.song
+  module:
+    - text
+    - user
+id: node.song.default
+targetEntityType: node
+bundle: song
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_categories:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_original_artist:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_song:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

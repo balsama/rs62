@@ -1,0 +1,14 @@
+uuid: e9d5409c-1d23-49c4-8def-52f4ca5e4511
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.song_reviewer
+  module:
+    - user
+id: user_remove_role_action.song_reviewer
+label: 'Remove the Song reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: song_reviewer

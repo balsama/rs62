@@ -1,0 +1,45 @@
+uuid: b722b12b-fe44-4aab-a590-d70c834c8d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_musicians
+    - media.type.audio
+    - taxonomy.vocabulary.musicians
+  content:
+    - 'taxonomy_term:musicians:210d2f8f-40e2-4187-8a97-7c4f0d323a14'
+    - 'taxonomy_term:musicians:5207d366-704e-453b-9eee-908b1708f782'
+    - 'taxonomy_term:musicians:60d1dadf-fe5f-4507-8b3f-d5b36d81e19e'
+    - 'taxonomy_term:musicians:b050043d-c3a1-4048-b129-23a679bd248f'
+    - 'taxonomy_term:musicians:fc57718c-2c78-4e0d-9f93-5b48372ab475'
+id: media.audio.field_musicians
+field_name: field_musicians
+entity_type: media
+bundle: audio
+label: Musicians
+description: 'Enter the people who played on this recording of the song separated by a comma. Defaults to current (paying) members. (UIDs are auto-populated. That is, don''t worry about the numbers that show up after the names.)'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: b050043d-c3a1-4048-b129-23a679bd248f
+  -
+    target_uuid: fc57718c-2c78-4e0d-9f93-5b48372ab475
+  -
+    target_uuid: 210d2f8f-40e2-4187-8a97-7c4f0d323a14
+  -
+    target_uuid: 5207d366-704e-453b-9eee-908b1708f782
+  -
+    target_uuid: 60d1dadf-fe5f-4507-8b3f-d5b36d81e19e
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      musicians: musicians
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

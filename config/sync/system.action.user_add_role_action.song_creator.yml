@@ -1,0 +1,14 @@
+uuid: 6882b8ff-2a2c-4223-8f2f-29729def5204
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.song_creator
+  module:
+    - user
+id: user_add_role_action.song_creator
+label: 'Add the Song creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: song_creator

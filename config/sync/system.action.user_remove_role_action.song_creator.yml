@@ -1,0 +1,14 @@
+uuid: e94fd934-a7fc-4144-a096-98ed9b866169
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.song_creator
+  module:
+    - user
+id: user_remove_role_action.song_creator
+label: 'Remove the Song creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: song_creator

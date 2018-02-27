@@ -1,0 +1,14 @@
+uuid: 9d943e52-e730-4414-a323-d8bb48b2edf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.media_manager
+  module:
+    - user
+id: user_remove_role_action.media_manager
+label: 'Remove the Media manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: media_manager

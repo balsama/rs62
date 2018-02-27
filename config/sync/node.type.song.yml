@@ -1,0 +1,17 @@
+uuid: e917bbcd-5d8c-4444-b868-40fb17b7f27d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Song
+type: song
+description: 'A song we have or should record.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,34 @@
+uuid: 787b573a-050e-4d8f-be2a-643e5ee84d60
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser
+    - field.field.media.audio.field_media_audio_file
+    - media.type.audio
+  module:
+    - file
+_core:
+  default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
+id: media.audio.teaser
+targetEntityType: media
+bundle: audio
+mode: teaser
+content:
+  field_media_audio_file:
+    type: file_audio
+    weight: 0
+    label: visually_hidden
+    settings:
+      controls: true
+      multiple_file_display_type: tags
+      autoplay: false
+      loop: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_recorded_date: true
+  name: true
+  thumbnail: true
+  uid: true

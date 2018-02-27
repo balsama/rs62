@@ -1,0 +1,29 @@
+uuid: 476ee09d-4e42-49c2-9a2f-fdfb84583168
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categories
+    - node.type.song
+    - taxonomy.vocabulary.tags
+id: node.song.field_categories
+field_name: field_categories
+entity_type: node
+bundle: song
+label: Categories
+description: 'Any other categories that this song should be grouped in.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

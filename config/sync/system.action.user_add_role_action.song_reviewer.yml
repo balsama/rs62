@@ -1,0 +1,14 @@
+uuid: 4f72e539-9ef5-47c3-bab4-6bce6193504a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.song_reviewer
+  module:
+    - user
+id: user_add_role_action.song_reviewer
+label: 'Add the Song reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: song_reviewer

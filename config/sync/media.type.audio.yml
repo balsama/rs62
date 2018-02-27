@@ -1,0 +1,15 @@
+uuid: 6d3e469c-1370-4687-a246-89ba2f7c7211
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: RQ75tMARZvKiI0hge9SKZpZFi-dOzZyq0nlouHHBeLM
+id: audio
+label: Recording
+description: 'A single recording of a song.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file
+field_map: {  }

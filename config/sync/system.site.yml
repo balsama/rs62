@@ -1,0 +1,14 @@
+uuid: 7c905d32-ced0-4dc7-8dfc-b4b06fbe5773
+name: 'RS62 Jams'
+mail: balsam.adam@gmail.com
+slogan: '...not drunk enough, sir.'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

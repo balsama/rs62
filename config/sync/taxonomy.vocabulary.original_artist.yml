@@ -1,0 +1,9 @@
+uuid: a09fa48c-6aae-410a-8022-3952624258a2
+langcode: en
+status: true
+dependencies: {  }
+name: 'Original artist'
+vid: original_artist
+description: ''
+hierarchy: 0
+weight: 0

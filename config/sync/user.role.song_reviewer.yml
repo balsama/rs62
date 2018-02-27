@@ -1,0 +1,12 @@
+uuid: b2f65b5a-6d0c-4a76-bd27-03d29acff5b9
+langcode: en
+status: true
+dependencies: {  }
+id: song_reviewer
+label: 'Song reviewer'
+weight: 12
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any song content'
+  - 'edit any song content'
