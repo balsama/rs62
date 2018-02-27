@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
+    - datetime
     - file
     - path
 _core:
@@ -28,13 +31,28 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_musicians:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_recorded_date:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   name:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: 'The name of the specific recording of the song.'
+      placeholder: 'The name of this specific recording of the song.'
     third_party_settings: {  }
   path:
     type: path

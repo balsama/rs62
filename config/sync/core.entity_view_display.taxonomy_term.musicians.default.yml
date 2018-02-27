@@ -1,0 +1,32 @@
+uuid: 12c567bf-805d-4cd2-890f-7d9855b5c791
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.musicians.field_buddy
+    - taxonomy.vocabulary.musicians
+  module:
+    - text
+id: taxonomy_term.musicians.default
+targetEntityType: taxonomy_term
+bundle: musicians
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_buddy:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden: {  }

@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_form_mode.media.ief
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
+    - datetime
     - file
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
@@ -22,6 +25,21 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_musicians:
+    type: entity_reference_autocomplete_tags
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: 'Adam, Chris, Mahlon, Matt, Pete'
+    third_party_settings: {  }
+  field_recorded_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0

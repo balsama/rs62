@@ -11,7 +11,7 @@ field_name: field_categories
 entity_type: node
 bundle: song
 label: Categories
-description: ''
+description: 'Any other categories that this song should be grouped in.'
 required: false
 translatable: false
 default_value: {  }

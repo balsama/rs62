@@ -11,7 +11,7 @@ field_name: field_song
 entity_type: node
 bundle: song
 label: Recordings
-description: 'At least one version of the song as recorded by us. You can upload multiple or add files here if we''ve recorded it more than once.'
+description: 'Versions of the song as recorded by us. You can upload multiple or add files here if we''ve recorded it more than once.'
 required: true
 translatable: false
 default_value: {  }

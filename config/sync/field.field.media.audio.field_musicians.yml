@@ -1,0 +1,29 @@
+uuid: b722b12b-fe44-4aab-a590-d70c834c8d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_musicians
+    - media.type.audio
+    - taxonomy.vocabulary.musicians
+id: media.audio.field_musicians
+field_name: field_musicians
+entity_type: media
+bundle: audio
+label: Musicians
+description: 'Select the people who played on this recording of the song.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      musicians: musicians
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

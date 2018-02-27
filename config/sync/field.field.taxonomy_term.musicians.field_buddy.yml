@@ -1,0 +1,23 @@
+uuid: a315c8f1-d163-42b2-aead-75121463ac2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_buddy
+    - taxonomy.vocabulary.musicians
+id: taxonomy_term.musicians.field_buddy
+field_name: field_buddy
+entity_type: taxonomy_term
+bundle: musicians
+label: Buddy
+description: 'Is this dude a buddy?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
