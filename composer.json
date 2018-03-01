@@ -22,7 +22,6 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/bootstrap": "^3.0",
-        "drupal/config_installer": "^1.5",
         "drupal/console": "^1.0.2",
         "drupal/core": "~8.5.0",
         "drupal/lightning_core": "2.x-dev",
@@ -72,13 +71,6 @@
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
-        "patches": {
-            "drupal/config_installer": {
-                "2916090 - Support Drush 9":
-                "https://www.drupal.org/files/issues/drush9-support-2916090-6.patch",
-                "2935426 - Drush 9: Call to undefined function drush_generate_password":
-                "https://www.drupal.org/files/issues/config_installer-drush_9_call_undefined_function_drush_generate_password-2935426-2.patch"
-            }
-        }
+        "patches": {}
     }
 }
