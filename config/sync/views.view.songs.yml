@@ -85,11 +85,11 @@ display:
             changed: changed
           info:
             title:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: false
+              empty_column: true
               responsive: ''
             field_song:
               align: ''

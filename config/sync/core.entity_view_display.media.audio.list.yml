@@ -20,7 +20,7 @@ mode: list
 content:
   field_media_audio_file:
     type: file_audio
-    weight: 0
+    weight: 1
     label: visually_hidden
     settings:
       controls: true
@@ -29,16 +29,8 @@ content:
       loop: false
     third_party_settings: {  }
     region: content
-  field_musicians:
-    weight: 2
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_recorded_date:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       timezone_override: ''
@@ -46,8 +38,16 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
 hidden:
   created: true
-  name: true
+  field_musicians: true
   thumbnail: true
   uid: true

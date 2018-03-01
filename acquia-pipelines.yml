@@ -19,3 +19,8 @@ events:
             - export PATH="$HOME/.composer/vendor/bin:$SOURCE_DIR/vendor/bin:$PATH"
             - composer validate --no-check-all --ansi --no-interaction
             - composer install
+      - cleanup:
+          type: script
+          script:
+            # Remove dev tools from the Cloud build.
+            - composer remove acquia/lightning_dev --dev
