@@ -6,6 +6,7 @@ dependencies:
     - field.storage.media.field_media_audio_file
     - field.storage.media.field_musicians
     - field.storage.media.field_recorded_date
+    - field.storage.node.field_original_artist
     - media.type.audio
     - taxonomy.vocabulary.musicians
   module:
@@ -88,9 +89,11 @@ display:
             title: title
             name: name
             field_recorded_date: field_recorded_date
+            field_musicians: field_musicians
+            field_media_audio_file: field_media_audio_file
           info:
             title:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -110,11 +113,84 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: '-1'
+            field_musicians:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_media_audio_file:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: field_recorded_date
           empty_table: false
       row:
         type: fields
       fields:
+        field_original_artist:
+          id: field_original_artist
+          table: node__field_original_artist
+          field: field_original_artist
+          relationship: reverse__node__field_song
+          group_type: group
+          admin_label: ''
+          label: 'Original Artist'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         title:
           id: title
           table: node_field_data
@@ -125,8 +201,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ title }} ({{ field_original_artist }})'
             make_link: false
             path: ''
             absolute: false
@@ -297,7 +373,72 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: short
+            format_type: html_date
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_recorded_date_1:
+          id: field_recorded_date_1
+          table: media__field_recorded_date
+          field: field_recorded_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_time_ago
+          settings:
+            future_format: '@interval hence'
+            past_format: '@interval ago'
+            granularity: 1
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -379,7 +520,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Audio file'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -412,7 +553,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -585,6 +726,7 @@ display:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
         - 'config:field.storage.media.field_recorded_date'
+        - 'config:field.storage.node.field_original_artist'
   page_1:
     display_plugin: page
     id: page_1
@@ -606,3 +748,4 @@ display:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
         - 'config:field.storage.media.field_recorded_date'
+        - 'config:field.storage.node.field_original_artist'
