@@ -1,0 +1,28 @@
+uuid: 45189884-e21c-45f3-9a80-242015a9f3a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_associated_song
+    - media.type.audio
+    - node.type.song
+id: media.audio.field_associated_song
+field_name: field_associated_song
+entity_type: media
+bundle: audio
+label: 'Associated Song'
+description: 'All recordings must be associated with exactly one song. If the song doesn''t yet exist, you can create it at <a href="[site:url]node/add/song">Add song</a>. (and you can upload this recording at the same time).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      song: song
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -13,3 +13,6 @@ color: 0.0.0
 big_pipe: 8.5.0-rc1
 search: 0.0.0
 shortcut: 0.0.0
+cer: 4.0.0-alpha2
+auto_entitylabel: 2.1.0-beta1
+token: 1.1.0
