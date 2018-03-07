@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
     - field.field.media.audio.field_recorded_date
@@ -24,6 +25,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_associated_song:
+    weight: 28
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_media_audio_file:
     weight: 1
     settings:
