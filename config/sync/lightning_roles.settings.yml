@@ -13,6 +13,10 @@ content_roles:
       - 'access toolbar'
       - 'use text format rich_text'
       - 'access media_browser entity browser pages'
+      - 'access panels in-place editing'
+      - 'change layouts in place editing'
+      - 'administer panelizer node ? content'
+      - 'administer panelizer node ? layout'
   reviewer:
     enabled: true
     label: '? reviewer'

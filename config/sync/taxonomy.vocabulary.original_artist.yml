@@ -4,6 +4,6 @@ status: true
 dependencies: {  }
 name: 'Original artist'
 vid: original_artist
-description: ''
+description: 'The group/artist that recorded the original inspiration.'
 hierarchy: 0
 weight: 0

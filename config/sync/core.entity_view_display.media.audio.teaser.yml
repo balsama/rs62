@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.teaser
+    - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
     - file
@@ -28,6 +31,8 @@ content:
     region: content
 hidden:
   created: true
+  field_associated_song: true
+  field_musicians: true
   field_recorded_date: true
   name: true
   thumbnail: true

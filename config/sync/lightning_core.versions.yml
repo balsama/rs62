@@ -16,3 +16,12 @@ shortcut: 0.0.0
 cer: 4.0.0-alpha2
 auto_entitylabel: 2.1.0-beta1
 token: 1.1.0
+layout_discovery: 8.5.0
+layout_builder: 8.5.0
+ctools: 3.0.0
+ctools_block: 3.0.0
+panels: 4.2.0
+panels_ipe: 4.2.0
+panelizer: 4.0.0
+panelizer_quickedit: 4.0.0
+lightning_layout: 1.1.0

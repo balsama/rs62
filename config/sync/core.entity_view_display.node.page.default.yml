@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.panelizer
     - node.type.page
   module:
     - text
@@ -25,4 +26,7 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  panelizer: true

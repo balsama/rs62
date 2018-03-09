@@ -78,11 +78,19 @@ display:
           summary: ''
           description: ''
           columns:
+            view_node: view_node
             title: title
             field_song: field_song
             field_original_artist: field_original_artist
             changed: changed
           info:
+            view_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
               sortable: true
               default_sort_order: asc
@@ -111,7 +119,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: '-1'
+          default: changed
           empty_table: false
       row:
         type: fields
@@ -225,7 +233,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -250,7 +258,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_song }}. {{ view_node }}'
+            text: '{{ field_song }}'
             make_link: false
             path: ''
             absolute: false
