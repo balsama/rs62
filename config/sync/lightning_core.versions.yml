@@ -25,3 +25,6 @@ panels_ipe: 4.2.0
 panelizer: 4.0.0
 panelizer_quickedit: 4.0.0
 lightning_layout: 1.1.0
+votingapi: 3.0.0-alpha5
+vud: 0.0.0
+votingapi_widgets: 1.0.0-alpha3

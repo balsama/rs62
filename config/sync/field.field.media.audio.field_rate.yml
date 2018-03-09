@@ -1,0 +1,27 @@
+uuid: 7556df98-989f-4ddc-b5c4-db2bd409330a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_rate
+    - media.type.audio
+  module:
+    - votingapi_widgets
+id: media.audio.field_rate
+field_name: field_rate
+entity_type: media
+bundle: audio
+label: Rate
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: '1'
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

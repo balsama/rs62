@@ -31,6 +31,8 @@
         "drupal/lightning_workflow": "1.1.0",
         "drupal/media_entity_audio": "2.0.0-alpha1",
         "drupal/token": "^1.1",
+        "drupal/votingapi": "^3.0.0-alpha5",
+        "drupal/votingapi_widgets": "1.x-dev#97133dd",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },

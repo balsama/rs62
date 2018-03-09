@@ -4,13 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.ief
+    - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_rate
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
     - datetime
+    - field_layout
     - file
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
 id: media.audio.ief
@@ -50,6 +58,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_associated_song: true
+  field_rate: true
   path: true
   status: true
   uid: true

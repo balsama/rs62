@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_media_audio_file
     - field.storage.media.field_musicians
+    - field.storage.media.field_rate
     - field.storage.media.field_recorded_date
     - field.storage.node.field_original_artist
     - media.type.audio
@@ -17,6 +18,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - votingapi_widgets
 id: recordings
 label: Recordings
 module: views
@@ -93,6 +95,7 @@ display:
             field_recorded_date: field_recorded_date
             field_musicians: field_musicians
             field_media_audio_file: field_media_audio_file
+            field_rate: field_rate
           info:
             title:
               sortable: true
@@ -128,6 +131,13 @@ display:
               empty_column: false
               responsive: ''
             field_media_audio_file:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_rate:
+              sortable: true
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -520,6 +530,72 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        field_rate:
+          id: field_rate
+          table: media__field_rate
+          field: field_rate
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: 'Status: {{ field_rate__status }} Rate: {{ field_rate }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: status
+          type: voting_api_formatter
+          settings:
+            style: default
+            readonly: 0
+            show_results: 1
+            show_own_vote: 0
+          group_column: status
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -753,6 +829,17 @@ display:
           required: false
           entity_type: media
           plugin_id: entity_reverse
+        vid:
+          id: vid
+          table: node_field_revision
+          field: vid
+          relationship: reverse__node__field_song
+          group_type: group
+          admin_label: 'Get the actual content from a content revision.'
+          required: false
+          entity_type: node
+          entity_field: vid
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
@@ -772,6 +859,7 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
+        - 'config:field.storage.media.field_rate'
         - 'config:field.storage.media.field_recorded_date'
         - 'config:field.storage.node.field_original_artist'
   page_1:
@@ -794,5 +882,6 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
+        - 'config:field.storage.media.field_rate'
         - 'config:field.storage.media.field_recorded_date'
         - 'config:field.storage.node.field_original_artist'

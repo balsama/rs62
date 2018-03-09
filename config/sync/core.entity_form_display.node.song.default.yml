@@ -6,12 +6,20 @@ dependencies:
     - core.entity_form_mode.media.ief
     - field.field.node.song.body
     - field.field.node.song.field_categories
+    - field.field.node.song.field_comments
     - field.field.node.song.field_original_artist
     - field.field.node.song.field_song
     - node.type.song
   module:
+    - comment
+    - field_layout
     - inline_entity_form
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.song.default
 targetEntityType: node
 bundle: song
@@ -34,6 +42,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_comments:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_original_artist:
     weight: 3

@@ -1,0 +1,22 @@
+uuid: 4c78315a-6050-4c87-a942-398619b75a63
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - votingapi_widgets
+id: media.field_rate
+field_name: field_rate
+entity_type: media
+type: voting_api_field
+settings:
+  vote_type: vote
+  vote_plugin: useful
+  status: ''
+module: votingapi_widgets
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

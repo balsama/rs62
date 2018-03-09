@@ -6,12 +6,20 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_rate
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
     - datetime
+    - field_layout
     - file
+    - layout_discovery
     - path
+    - votingapi_widgets
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
 id: media.audio.default
@@ -49,6 +57,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_rate:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: voting_api_widget
     region: content
   field_recorded_date:
     weight: 26
