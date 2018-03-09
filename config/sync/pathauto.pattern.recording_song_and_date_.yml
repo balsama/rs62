@@ -1,0 +1,23 @@
+uuid: 132c4239-6eb9-456e-bda0-83b0aa743850
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - media
+id: recording_song_and_date_
+label: 'Recording song and date.'
+type: 'canonical_entities:media'
+pattern: '[media:field_associated_song]/[media:field_recorded_date]'
+selection_criteria:
+  407bfdff-af35-466c-9887-2fab7441a253:
+    id: 'entity_bundle:media'
+    bundles:
+      audio: audio
+    negate: false
+    context_mapping:
+      media: media
+    uuid: 407bfdff-af35-466c-9887-2fab7441a253
+selection_logic: and
+weight: -5
+relationships: {  }

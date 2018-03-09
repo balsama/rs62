@@ -20,10 +20,7 @@ settings:
             - Bold
             - Italic
             - Strike
-            - Superscript
-            - Subscript
             - '-'
-            - RemoveFormat
         -
           name: Linking
           items:
@@ -38,18 +35,11 @@ settings:
           name: Media
           items:
             - Blockquote
-            - Table
-            - HorizontalRule
             - media_browser
         -
           name: 'Block Formatting'
           items:
             - Format
-        -
-          name: Tools
-          items:
-            - ShowBlocks
-            - Source
   plugins:
     stylescombo:
       styles: ''

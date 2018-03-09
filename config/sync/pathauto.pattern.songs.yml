@@ -1,0 +1,22 @@
+uuid: bed6e424-fb5a-4d98-ab6d-4e8e88fc1cc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: songs
+label: Songs
+type: 'canonical_entities:node'
+pattern: 'songs/[node:title]'
+selection_criteria:
+  fc219faa-1ecd-40b8-90c5-cd1acd33d961:
+    id: node_type
+    bundles:
+      song: song
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fc219faa-1ecd-40b8-90c5-cd1acd33d961
+selection_logic: and
+weight: -5
+relationships: {  }
