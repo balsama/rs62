@@ -576,8 +576,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: "{{ results.vote_field_count }}\n{{ field_plus_1.vote_field_count }}\n{{ field_plus_1__status.vote_field_count }}"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
