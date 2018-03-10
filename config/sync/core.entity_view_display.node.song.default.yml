@@ -117,7 +117,7 @@ third_party_settings:
         weight: 0
         layout: layout_twocol
         layout_settings: {  }
-        page_title: null
+        page_title: '[node:title]'
         storage_type: panelizer_default
         storage_id: 'node:song:default:default'
         builder: standard
