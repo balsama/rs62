@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_media_audio_file
     - field.storage.media.field_musicians
-    - field.storage.media.field_rate
+    - field.storage.media.field_plus_1
     - field.storage.media.field_recorded_date
     - field.storage.node.field_original_artist
     - media.type.audio
@@ -131,7 +131,7 @@ display:
             field_recorded_date: field_recorded_date
             field_musicians: field_musicians
             field_media_audio_file: field_media_audio_file
-            field_rate: field_rate
+            field_plus_1: field_plus_1
           info:
             title:
               sortable: true
@@ -171,8 +171,8 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_rate:
-              sortable: true
+            field_plus_1:
+              sortable: false
               default_sort_order: desc
               align: ''
               separator: ''
@@ -566,10 +566,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_rate:
-          id: field_rate
-          table: media__field_rate
-          field: field_rate
+        field_plus_1:
+          id: field_plus_1
+          table: media__field_plus_1
+          field: field_plus_1
           relationship: none
           group_type: group
           admin_label: ''
@@ -577,7 +577,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: 'Status: {{ field_rate__status }} Rate: {{ field_rate }}'
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -619,7 +619,7 @@ display:
           settings:
             style: default
             readonly: 0
-            show_results: 0
+            show_results: 1
             show_own_vote: 0
           group_column: status
           group_columns: {  }
@@ -948,7 +948,7 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
-        - 'config:field.storage.media.field_rate'
+        - 'config:field.storage.media.field_plus_1'
         - 'config:field.storage.media.field_recorded_date'
         - 'config:field.storage.node.field_original_artist'
   page_1:
@@ -971,6 +971,6 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
-        - 'config:field.storage.media.field_rate'
+        - 'config:field.storage.media.field_plus_1'
         - 'config:field.storage.media.field_recorded_date'
         - 'config:field.storage.node.field_original_artist'

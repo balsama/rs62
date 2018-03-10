@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.media.field_media_audio_file
     - field.storage.media.field_musicians
-    - field.storage.media.field_rate
+    - field.storage.media.field_plus_1
     - field.storage.media.field_recorded_date
     - media.type.audio
   module:
@@ -254,10 +254,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_rate:
-          id: field_rate
-          table: media__field_rate
-          field: field_rate
+        field_plus_1:
+          id: field_plus_1
+          table: media__field_plus_1
+          field: field_plus_1
           relationship: none
           group_type: group
           admin_label: ''
@@ -408,7 +408,7 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
-        - 'config:field.storage.media.field_rate'
+        - 'config:field.storage.media.field_plus_1'
         - 'config:field.storage.media.field_recorded_date'
   block_1:
     display_plugin: block
@@ -427,5 +427,5 @@ display:
       tags:
         - 'config:field.storage.media.field_media_audio_file'
         - 'config:field.storage.media.field_musicians'
-        - 'config:field.storage.media.field_rate'
+        - 'config:field.storage.media.field_plus_1'
         - 'config:field.storage.media.field_recorded_date'

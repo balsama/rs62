@@ -1,8 +1,0 @@
-uuid: b7349b72-2c0d-4f7f-916a-85d92b889255
-langcode: en
-status: true
-dependencies: {  }
-id: summary
-label: Summary
-value_type: summary
-description: 'A summary??'

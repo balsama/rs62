@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ae3eaa5f9e436ef3f07b87fa6587180",
+    "content-hash": "a34ec15d8f3f33f0f69d514f360f0d65",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4194,6 +4194,9 @@
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Allow immediate revoting": "./patches/immediate-rollover.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4252,6 +4255,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "2945497 - Like button widget": "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

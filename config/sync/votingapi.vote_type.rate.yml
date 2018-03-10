@@ -1,8 +1,0 @@
-uuid: 8c6be217-d267-473d-a15f-87742826d6ed
-langcode: en
-status: true
-dependencies: {  }
-id: rate
-label: Rate
-value_type: points
-description: 'Not sure how this is different from vote. lets see.'

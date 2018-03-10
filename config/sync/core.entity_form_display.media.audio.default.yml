@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
-    - field.field.media.audio.field_rate
+    - field.field.media.audio.field_plus_1
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
@@ -58,9 +58,10 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_rate:
+  field_plus_1:
     weight: 29
-    settings: {  }
+    settings:
+      show_initial_vote: 0
     third_party_settings: {  }
     type: voting_api_widget
     region: content

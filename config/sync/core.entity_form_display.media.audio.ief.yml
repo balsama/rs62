@@ -7,7 +7,6 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
-    - field.field.media.audio.field_rate
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
@@ -59,7 +58,6 @@ content:
 hidden:
   created: true
   field_associated_song: true
-  field_rate: true
   path: true
   status: true
   uid: true

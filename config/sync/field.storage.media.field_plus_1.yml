@@ -1,17 +1,17 @@
-uuid: 4c78315a-6050-4c87-a942-398619b75a63
+uuid: 732e407f-4673-4afc-a55d-bead58b61bb2
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - votingapi_widgets
-id: media.field_rate
-field_name: field_rate
+id: media.field_plus_1
+field_name: field_plus_1
 entity_type: media
 type: voting_api_field
 settings:
   vote_type: vote
-  vote_plugin: useful
+  vote_plugin: like
   status: ''
 module: votingapi_widgets
 locked: false

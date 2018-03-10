@@ -1,23 +1,24 @@
-uuid: 7556df98-989f-4ddc-b5c4-db2bd409330a
+uuid: 6b2be765-42fc-4367-96ac-18a25af7eb01
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_rate
+    - field.storage.media.field_plus_1
     - media.type.audio
   module:
     - votingapi_widgets
-id: media.audio.field_rate
-field_name: field_rate
+id: media.audio.field_plus_1
+field_name: field_plus_1
 entity_type: media
 bundle: audio
-label: Rate
+label: 'Plus 1'
 description: ''
 required: false
 translatable: false
 default_value:
   -
     status: '1'
+    value: 0
 default_value_callback: ''
 settings:
   anonymous_window: '-1'
