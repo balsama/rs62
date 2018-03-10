@@ -7,6 +7,7 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_plus_1
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
@@ -39,7 +40,7 @@ content:
     settings:
       match_operator: CONTAINS
       size: 60
-      placeholder: 'Adam, Chris, Mahlon, Matt, Pete'
+      placeholder: ''
     third_party_settings: {  }
   field_recorded_date:
     type: datetime_default
@@ -58,6 +59,7 @@ content:
 hidden:
   created: true
   field_associated_song: true
+  field_plus_1: true
   path: true
   status: true
   uid: true

@@ -7,30 +7,30 @@ dependencies:
     - media.type.audio
     - taxonomy.vocabulary.musicians
   content:
-    - 'taxonomy_term:musicians:210d2f8f-40e2-4187-8a97-7c4f0d323a14'
-    - 'taxonomy_term:musicians:5207d366-704e-453b-9eee-908b1708f782'
-    - 'taxonomy_term:musicians:60d1dadf-fe5f-4507-8b3f-d5b36d81e19e'
-    - 'taxonomy_term:musicians:b050043d-c3a1-4048-b129-23a679bd248f'
-    - 'taxonomy_term:musicians:fc57718c-2c78-4e0d-9f93-5b48372ab475'
+    - 'taxonomy_term:musicians:08e61664-9f9d-4e0b-b203-6767dbe73fc9'
+    - 'taxonomy_term:musicians:1f70eda4-d7da-49ef-bc32-3a1c1eaf4c1a'
+    - 'taxonomy_term:musicians:b31afd9b-59ec-45a4-97a1-baa42f405835'
+    - 'taxonomy_term:musicians:d049d4e3-7e25-414b-b43a-083d43a18356'
+    - 'taxonomy_term:musicians:f7d335cd-1c51-4eff-8f69-526bb8b818d3'
 id: media.audio.field_musicians
 field_name: field_musicians
 entity_type: media
 bundle: audio
 label: Musicians
-description: 'Enter the people who played on this recording of the song separated by a comma. Defaults to current (paying) members. (UIDs are auto-populated. That is, don''t worry about the numbers that show up after the names.)'
+description: 'Enter the people who played on this recording of the song <strong>separated by commas</strong>. Defaults to current official RS62 members.'
 required: false
 translatable: false
 default_value:
   -
-    target_uuid: b050043d-c3a1-4048-b129-23a679bd248f
+    target_uuid: d049d4e3-7e25-414b-b43a-083d43a18356
   -
-    target_uuid: fc57718c-2c78-4e0d-9f93-5b48372ab475
+    target_uuid: b31afd9b-59ec-45a4-97a1-baa42f405835
   -
-    target_uuid: 210d2f8f-40e2-4187-8a97-7c4f0d323a14
+    target_uuid: 08e61664-9f9d-4e0b-b203-6767dbe73fc9
   -
-    target_uuid: 5207d366-704e-453b-9eee-908b1708f782
+    target_uuid: f7d335cd-1c51-4eff-8f69-526bb8b818d3
   -
-    target_uuid: 60d1dadf-fe5f-4507-8b3f-d5b36d81e19e
+    target_uuid: 1f70eda4-d7da-49ef-bc32-3a1c1eaf4c1a
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
