@@ -81,7 +81,9 @@
         "patches": {
             "drupal/votingapi_widgets": {
                 "2945497 - Like button widget":
-                "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch"
+                "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch",
+                "Override templates":
+                "./patches/vote-widget-template-overrides.patch"
             },
             "drupal/votingapi": {
                 "Allow immediate revoting":

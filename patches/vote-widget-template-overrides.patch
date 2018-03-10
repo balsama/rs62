@@ -1,0 +1,18 @@
+diff --git a/templates/votingapi-widgets-summary--useful.html.twig b/templates/votingapi-widgets-summary--useful.html.twig
+index 659410c..4168a08 100644
+--- a/templates/votingapi-widgets-summary--useful.html.twig
++++ b/templates/votingapi-widgets-summary--useful.html.twig
+@@ -1,3 +1,3 @@
+ {{ trans }}
+-  {{ results.vote_field_count }} Votes2 with an average with {{ results.vote_field_average }}
++  {{ results.vote_field_count }}
+ {{ endtrans }}
+diff --git a/templates/votingapi-widgets-summary.html.twig b/templates/votingapi-widgets-summary.html.twig
+index 8286bde..4168a08 100644
+--- a/templates/votingapi-widgets-summary.html.twig
++++ b/templates/votingapi-widgets-summary.html.twig
+@@ -1,3 +1,3 @@
+ {{ trans }}
+-  {{ results.vote_field_count }} Votes with an average with {{ results.vote_field_average }}
++  {{ results.vote_field_count }}
+ {{ endtrans }}

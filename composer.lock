@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a34ec15d8f3f33f0f69d514f360f0d65",
+    "content-hash": "131a4f8039195fee426ca2956855fddc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4257,7 +4257,8 @@
                     }
                 },
                 "patches_applied": {
-                    "2945497 - Like button widget": "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch"
+                    "2945497 - Like button widget": "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch",
+                    "Override templates": "./patches/vote-widget-template-overrides.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
