@@ -12,6 +12,10 @@ dependencies:
   module:
     - datetime
     - file
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 _core:
   default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
 id: media.audio.list
@@ -43,6 +47,7 @@ hidden:
   created: true
   field_associated_song: true
   field_musicians: true
+  field_rate: true
   name: true
   thumbnail: true
   uid: true

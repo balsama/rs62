@@ -22,6 +22,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/auto_entitylabel": "^2.1",
+        "drupal/better_exposed_filters": "^3.0.0-alpha3",
         "drupal/bootstrap": "^3.0",
         "drupal/cer": "4.0.0-alpha2",
         "drupal/console": "^1.0.2",

@@ -11,6 +11,10 @@ dependencies:
     - node.type.song
   module:
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: node.song.teaser
 targetEntityType: node
 bundle: song
@@ -28,5 +32,6 @@ content:
 hidden:
   body: true
   field_categories: true
+  field_comments: true
   field_original_artist: true
   links: true
