@@ -11,7 +11,6 @@ permissions:
   - 'access in-place editing'
   - 'access media_browser entity browser pages'
   - 'access panels in-place editing'
-  - 'access toolbar'
   - 'administer panelizer node page content'
   - 'administer panelizer node page layout'
   - 'change layouts in place editing'
