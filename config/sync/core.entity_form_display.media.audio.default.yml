@@ -14,8 +14,6 @@ dependencies:
     - field_layout
     - file
     - layout_discovery
-    - path
-    - votingapi_widgets
 third_party_settings:
   field_layout:
     id: layout_onecol
@@ -27,14 +25,8 @@ targetEntityType: media
 bundle: audio
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_associated_song:
-    weight: 28
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -50,7 +42,7 @@ content:
     type: file_generic
     region: content
   field_musicians:
-    weight: 27
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -58,15 +50,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_plus_1:
-    weight: 29
-    settings:
-      show_initial_vote: 0
-    third_party_settings: {  }
-    type: voting_api_widget
-    region: content
   field_recorded_date:
-    weight: 26
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -79,17 +64,9 @@ content:
       size: 60
       placeholder: 'The name of this specific recording of the song.'
     third_party_settings: {  }
-  path:
-    type: path
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  uid:
-    type: options_buttons
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  created: true
+  field_plus_1: true
+  path: true
   status: true
+  uid: true

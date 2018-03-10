@@ -17,7 +17,7 @@ field_name: field_musicians
 entity_type: media
 bundle: audio
 label: Musicians
-description: 'Enter the people who played on this recording of the song <strong>separated by commas</strong>. Defaults to current official RS62 members.'
+description: 'Enter the people who played on this recording of the song <strong>separated by commas</strong>. Defaults to current official RS62 members. If someone isn''t on the list, just enter their name, and they''ll automatically be created.'
 required: false
 translatable: false
 default_value:
