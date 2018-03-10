@@ -1,0 +1,13 @@
+diff --git a/votingapi_widgets.module b/votingapi_widgets.module
+index 39bb245..8f25359 100644
+--- a/votingapi_widgets.module
++++ b/votingapi_widgets.module
+@@ -44,7 +44,7 @@ function votingapi_widgets_entity_base_field_info(EntityTypeInterface $entity_ty
+     ->setRevisionable(FALSE)
+     ->setRequired(FALSE)
+     ->setDescription(t('Holds the field name.'))
+-    ->setPropertyConstraints('value', array('Length' => array('max' => FieldStorageConfig::NAME_MAX_LENGTH)));
++    ->setPropertyConstraints('value', array('Length' => array('max' => 32)));
+ 
+   return $fields;
+ }

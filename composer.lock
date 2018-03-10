@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccf1b9057aa59f01d2359e6217c53584",
+    "content-hash": "fafc857a7de4cbe306b6260eb682d119",
     "packages": [
         {
             "name": "alchemy/zippy",
