@@ -1,8 +1,9 @@
-uuid: 3455fc4e-b476-4155-be2b-4fdf067f098a
+uuid: 6f683d86-2e85-4f24-83f2-ba50891cc976
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.embedded
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
     - media.type.image
@@ -15,11 +16,11 @@ third_party_settings:
     id: layout_onecol
     settings: {  }
 _core:
-  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
-id: media.image.default
+  default_config_hash: FaHkkj9J9DxKQ-R7RNddSDq_d0D6UBY3hoKzoAQoGaw
+id: media.image.embedded
 targetEntityType: media
 bundle: image
-mode: default
+mode: embedded
 content:
   image:
     type: image

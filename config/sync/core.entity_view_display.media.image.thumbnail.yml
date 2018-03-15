@@ -1,10 +1,12 @@
-uuid: 3455fc4e-b476-4155-be2b-4fdf067f098a
+uuid: fa47d64d-aa3d-483f-a8ec-394666d8f661
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.thumbnail
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
+    - image.style.medium
     - media.type.image
   module:
     - field_layout
@@ -15,18 +17,18 @@ third_party_settings:
     id: layout_onecol
     settings: {  }
 _core:
-  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
-id: media.image.default
+  default_config_hash: Gb3qN_HZzqfFf4728OIYBwnMVryxUzlsWkmOY56idC8
+id: media.image.thumbnail
 targetEntityType: media
 bundle: image
-mode: default
+mode: thumbnail
 content:
   image:
     type: image
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
     region: content

@@ -1,33 +1,32 @@
-uuid: 3455fc4e-b476-4155-be2b-4fdf067f098a
+uuid: 6321e265-06d5-4f21-a854-832f6aeca038
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
-    - media.type.image
+    - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_media_in_library
+    - media.type.instagram
   module:
     - field_layout
-    - image
     - layout_discovery
+    - media_entity_instagram
 third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
 _core:
-  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
-id: media.image.default
+  default_config_hash: FGDcC__SDFv-9J0bOZYpGLVXKr2uIoXpNJOg8yLD7mU
+id: media.instagram.default
 targetEntityType: media
-bundle: image
+bundle: instagram
 mode: default
 content:
-  image:
-    type: image
+  embed_code:
+    type: instagram_embed
     weight: 0
-    label: hidden
+    label: visually_hidden
     settings:
-      image_style: ''
-      image_link: ''
+      width: 480
     third_party_settings: {  }
     region: content
 hidden:

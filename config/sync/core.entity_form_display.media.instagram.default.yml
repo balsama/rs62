@@ -1,15 +1,13 @@
-uuid: 076510a0-0908-433a-9849-0ca62bec7a10
+uuid: c7035333-b676-4fef-98ad-89203baf23c6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
-    - image.style.thumbnail
-    - media.type.image
+    - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_media_in_library
+    - media.type.instagram
   module:
     - field_layout
-    - image
     - layout_discovery
     - path
 third_party_settings:
@@ -17,30 +15,30 @@ third_party_settings:
     id: layout_onecol
     settings: {  }
 _core:
-  default_config_hash: kyoAHlZTGIuGTaQuBblGBk8EhfnVKOl19_0j5WbpQqM
-id: media.image.default
+  default_config_hash: 59ziPzJNPAqMrCE-SBvcUQxVXORfAJ_tkMlS4sIUAFQ
+id: media.instagram.default
 targetEntityType: media
-bundle: image
+bundle: instagram
 mode: default
 content:
+  embed_code:
+    type: string_textarea
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 4
+    weight: 1
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
-  image:
-    type: image_image
-    weight: 0
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    region: content
   name:
     type: string_textfield
-    weight: 3
+    weight: 0
     settings:
       size: 60
       placeholder: ''
@@ -52,6 +50,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  preview:
+    weight: 0
+    region: content
   status:
     type: boolean_checkbox
     settings:

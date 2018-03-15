@@ -17,6 +17,7 @@ content_roles:
       - 'change layouts in place editing'
       - 'administer panelizer node ? content'
       - 'administer panelizer node ? layout'
+      - 'access image_browser entity browser pages'
   reviewer:
     enabled: true
     label: '? reviewer'

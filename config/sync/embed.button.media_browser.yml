@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'file:file:afa2aa5e-964a-4b1d-bc6e-247403e68f3b'
+    - 'file:file:4dd8a5bc-cfc9-48db-99dc-9c4f2c352081'
   module:
     - entity_embed
     - image
@@ -17,10 +17,9 @@ type_settings:
   entity_type: media
   bundles: {  }
   display_plugins:
-    - 'entity_reference:entity_reference_entity_view'
-    - media_image
     - 'view_mode:media.embedded'
+    - media_image
   entity_browser: media_browser
   entity_browser_settings:
     display_review: false
-icon_uuid: afa2aa5e-964a-4b1d-bc6e-247403e68f3b
+icon_uuid: 4dd8a5bc-cfc9-48db-99dc-9c4f2c352081

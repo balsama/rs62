@@ -1,15 +1,17 @@
-uuid: c343f796-5140-4dc0-9b16-d4c7aaf58517
+uuid: 04892105-dc14-4e89-baa6-6cc848d3c7f4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - video_embed_media
 _core:
-  default_config_hash: _Cj9j8iA9MZ3HWv7QEwv1Pdxni0UlWGKnMw3Ou0rlXo
+  default_config_hash: CDRaWPhGJXLhi1p3SiKLfu8Qq7S8OB3oG3DroYiiDjk
 id: video
 label: Video
-description: 'A locally hosted video file.'
-source: video_file
+description: 'A video hosted by YouTube, Vimeo, or some other provider.'
+source: video_embed_field
 queue_thumbnail_downloads: false
-new_revision: true
+new_revision: false
 source_configuration:
-  source_field: field_media_video_file
+  source_field: field_media_video_embed_field
 field_map: {  }
