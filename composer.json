@@ -32,6 +32,7 @@
         "drupal/lightning_media": "2.1.0",
         "drupal/lightning_workflow": "1.1.0",
         "drupal/media_entity_audio": "2.0.0-alpha1",
+        "drupal/responsive_favicons": "^1.4",
         "drupal/token": "^1.1",
         "drupal/votingapi": "3.0.0-alpha5",
         "drupal/votingapi_widgets": "1.x-dev#97133dd",

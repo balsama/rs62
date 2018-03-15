@@ -1,0 +1,33 @@
+uuid: 4be73dab-306c-4ec4-b731-769951be6567
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recording_notes
+    - field.field.comment.recording_notes.comment_body
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: comment.recording_notes.default
+targetEntityType: comment
+bundle: recording_notes
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

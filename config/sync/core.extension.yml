@@ -57,6 +57,7 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  responsive_favicons: 0
   system: 0
   taxonomy: 0
   text: 0

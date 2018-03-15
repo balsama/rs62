@@ -1,0 +1,20 @@
+uuid: ae40fc04-ee20-4349-9323-ee2d5d0c4dfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - media
+id: media.field_notes
+field_name: field_notes
+entity_type: media
+type: comment
+settings:
+  comment_type: recording_notes
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

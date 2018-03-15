@@ -1,0 +1,8 @@
+uuid: 67a2dffc-45bd-4f74-b160-d1dee73f4b25
+langcode: en
+status: true
+dependencies: {  }
+id: recording_notes
+label: 'Recording Notes'
+target_entity_type_id: media
+description: ''

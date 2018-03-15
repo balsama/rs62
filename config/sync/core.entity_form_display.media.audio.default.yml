@@ -6,10 +6,12 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_notes
     - field.field.media.audio.field_plus_1
     - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
+    - comment
     - datetime
     - field_layout
     - file
@@ -49,6 +51,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_notes:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_recorded_date:
     weight: 2

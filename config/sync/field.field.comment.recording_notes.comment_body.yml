@@ -1,0 +1,21 @@
+uuid: 5b276463-2b10-4707-8a1a-565bf94b842a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recording_notes
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.recording_notes.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: recording_notes
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
