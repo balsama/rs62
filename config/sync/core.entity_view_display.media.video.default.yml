@@ -7,8 +7,86 @@ dependencies:
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
   module:
+    - layout_builder
+    - layout_discovery
     - user
     - video_embed_field
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          73bd6bc3-8d0d-4547-b75d-9495e474ec98:
+            uuid: 73bd6bc3-8d0d-4547-b75d-9495e474ec98
+            region: content
+            configuration:
+              id: 'field_block:media:video:name'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          9b1782ec-e9eb-4351-8595-efdd131e87e6:
+            uuid: 9b1782ec-e9eb-4351-8595-efdd131e87e6
+            region: content
+            configuration:
+              id: 'field_block:media:video:created'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: timestamp
+                settings:
+                  date_format: medium
+                  custom_date_format: ''
+                  timezone: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          3d780b12-e27d-4d60-a55e-5a4747215952:
+            uuid: 3d780b12-e27d-4d60-a55e-5a4747215952
+            region: content
+            configuration:
+              id: 'field_block:media:video:uid'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: author
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          6442a426-4ecf-4aa9-aa19-80744eeffa1d:
+            uuid: 6442a426-4ecf-4aa9-aa19-80744eeffa1d
+            region: content
+            configuration:
+              id: 'field_block:media:video:field_media_video_embed_field'
+              label_display: ''
+              formatter:
+                type: video_embed_field_video
+                label: hidden
+                settings:
+                  responsive: true
+                  width: 854
+                  height: 480
+                  autoplay: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 3
+    allow_custom: false
 _core:
   default_config_hash: ULSDSeb1LGUAS40ia_8qngabv0GTcJAaHGl67xDUNsA
 id: media.video.default

@@ -3,10 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - lightning_core
     - media
+third_party_settings:
+  lightning_core:
+    description: 'For recordings displayed as part of Sessions full displays.'
 _core:
   default_config_hash: IvohHEiv_tHXtdBNMu7elD10mqN5cVonX-h3Z4vCpZs
 id: media.embedded
-label: Embedded
+label: 'Embedded in Session Full Display'
 targetEntityType: media
 cache: true

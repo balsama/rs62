@@ -1,15 +1,17 @@
-uuid: 86df4c0d-7806-42a8-baab-037cf6bae90c
+uuid: af3278b7-8b50-4fcc-b5f1-3494f31c2f2e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.list
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
   module:
+    - ctools_block
     - layout_builder
     - layout_discovery
+    - user
     - video_embed_field
 third_party_settings:
   layout_builder:
@@ -18,35 +20,48 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          f745691a-025b-43d3-b55d-e47b8afa8a09:
-            uuid: f745691a-025b-43d3-b55d-e47b8afa8a09
+          0d167fc9-9524-4c50-ab68-93014926d6aa:
+            uuid: 0d167fc9-9524-4c50-ab68-93014926d6aa
             region: content
             configuration:
-              id: 'field_block:media:video:field_media_video_embed_field'
-              label_display: ''
+              id: 'entity_field:media:field_media_video_embed_field'
+              label: 'Video URL'
+              provider: ctools_block
+              label_display: '0'
               formatter:
-                type: video_embed_field_video
                 label: hidden
+                type: video_embed_field_video
                 settings:
+                  autoplay: false
                   responsive: true
                   width: 854
                   height: 480
-                  autoplay: true
                 third_party_settings: {  }
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
 _core:
-  default_config_hash: DSsWBWw_gj2xxlQ12665l-yIIfFWIt7DJX33DGgbEHY
-id: media.video.embedded
+  default_config_hash: ULSDSeb1LGUAS40ia_8qngabv0GTcJAaHGl67xDUNsA
+id: media.video.list
 targetEntityType: media
 bundle: video
-mode: embedded
+mode: list
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 1
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+    region: content
   field_media_video_embed_field:
     type: video_embed_field_video
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       responsive: true
@@ -55,9 +70,21 @@ content:
       autoplay: true
     third_party_settings: {  }
     region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
-  created: true
   field_media_in_library: true
-  name: true
   thumbnail: true
-  uid: true

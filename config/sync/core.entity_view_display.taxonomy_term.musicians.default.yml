@@ -5,7 +5,31 @@ dependencies:
   config:
     - taxonomy.vocabulary.musicians
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          493f42f1-4710-4df3-a057-83e4d23a3393:
+            uuid: 493f42f1-4710-4df3-a057-83e4d23a3393
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:musicians:description'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: taxonomy_term.musicians.default
 targetEntityType: taxonomy_term
 bundle: musicians

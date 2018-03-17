@@ -6,10 +6,90 @@ dependencies:
     - field.field.node.song.body
     - field.field.node.song.field_assoc_recordings_from_song
     - field.field.node.song.field_original_artist
+    - field.field.node.song.field_video
     - node.type.song
+    - views.view.recording_list_for_songs
   module:
+    - ctools_block
+    - layout_builder
+    - layout_discovery
     - text
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_twocol
+        layout_settings: {  }
+        components:
+          9a8e38e0-3178-4cfd-abd8-9047963ece0c:
+            uuid: 9a8e38e0-3178-4cfd-abd8-9047963ece0c
+            region: second
+            configuration:
+              id: 'field_block:node:song:field_video'
+              label: Video
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: list
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          4dbae41d-3bb9-4d8d-bb2e-0effb01e3c40:
+            uuid: 4dbae41d-3bb9-4d8d-bb2e-0effb01e3c40
+            region: top
+            configuration:
+              id: 'field_block:node:song:body'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          8c23ae53-1b08-4df2-b346-1506e42438e4:
+            uuid: 8c23ae53-1b08-4df2-b346-1506e42438e4
+            region: first
+            configuration:
+              id: 'entity_field:node:field_original_artist'
+              label: 'Original Artist'
+              provider: ctools_block
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+                weight: 0
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          72ca81e0-893b-4f77-9f47-2a868bdc5980:
+            uuid: 72ca81e0-893b-4f77-9f47-2a868bdc5980
+            region: first
+            configuration:
+              id: 'views_block:recording_list_for_songs-block_1'
+              label: 'Recordings of this song'
+              provider: views
+              label_display: visible
+              views_label: 'Recordings of this song'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
 id: node.song.default
 targetEntityType: node
 bundle: song
@@ -38,6 +118,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_video:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
 hidden:
   links: true

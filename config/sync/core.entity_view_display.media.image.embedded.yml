@@ -9,6 +9,32 @@ dependencies:
     - media.type.image
   module:
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          48c86d48-a692-488d-880b-abf30efe47c3:
+            uuid: 48c86d48-a692-488d-880b-abf30efe47c3
+            region: content
+            configuration:
+              id: 'field_block:media:image:image'
+              label_display: ''
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: FaHkkj9J9DxKQ-R7RNddSDq_d0D6UBY3hoKzoAQoGaw
 id: media.image.embedded

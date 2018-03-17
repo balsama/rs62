@@ -1,0 +1,14 @@
+uuid: c443f7c3-29f1-4ab6-819e-8537cbb1e887
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'Used for the song video field.'
+id: media.ief_video
+label: 'IEF Video'
+targetEntityType: media
+cache: true

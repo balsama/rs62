@@ -7,6 +7,31 @@ dependencies:
     - media.type.file
   module:
     - file
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          27db5952-d035-456a-a311-e8c9f14576e0:
+            uuid: 27db5952-d035-456a-a311-e8c9f14576e0
+            region: content
+            configuration:
+              id: 'field_block:media:file:field_media_file'
+              label_display: ''
+              formatter:
+                label: visually_hidden
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings: {  }
+                type: file_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: 9s0lWIanCnW5Xrrkmedxohs9F0yk4LO8ZcmVQ9xyuu4
 id: media.file.default

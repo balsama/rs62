@@ -8,7 +8,33 @@ dependencies:
     - field.field.media.instagram.field_media_in_library
     - media.type.instagram
   module:
+    - layout_builder
+    - layout_discovery
     - media_entity_instagram
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          f2494c36-81b3-4298-b278-d9b304f92614:
+            uuid: f2494c36-81b3-4298-b278-d9b304f92614
+            region: content
+            configuration:
+              id: 'field_block:media:instagram:embed_code'
+              label_display: ''
+              formatter:
+                type: instagram_embed
+                label: hidden
+                settings:
+                  width: 480
+                  hidecaption: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: 2r0247fIz1-cJniAb5cEhB6aWuwsBmKlt0MQ3Kjryzg
 id: media.instagram.embedded
@@ -22,6 +48,7 @@ content:
     label: hidden
     settings:
       width: 480
+      hidecaption: false
     third_party_settings: {  }
     region: content
 hidden:

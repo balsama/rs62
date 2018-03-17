@@ -10,6 +10,32 @@ dependencies:
     - media.type.video
   module:
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          5056ebc5-ff51-45cb-a5b4-c11cb1679f9a:
+            uuid: 5056ebc5-ff51-45cb-a5b4-c11cb1679f9a
+            region: content
+            configuration:
+              id: 'field_block:media:video:thumbnail'
+              label_display: ''
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: medium
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: n4pfwmyfbKw7UgpIu3-0jgMdizFM7lDE38pJCB5hnSI
 id: media.video.thumbnail

@@ -9,7 +9,6 @@ dependencies:
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
     - field.field.media.audio.field_notes
-    - field.field.media.audio.field_plus_1
     - media.type.audio
   module:
     - file
@@ -45,7 +44,6 @@ hidden:
   created: true
   field_associated_session: true
   field_notes: true
-  field_plus_1: true
   name: true
   path: true
   status: true
