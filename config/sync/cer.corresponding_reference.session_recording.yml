@@ -1,0 +1,14 @@
+uuid: 3ea9ea92-7442-40fe-9251-69fec2d07ef2
+langcode: en
+status: true
+dependencies: {  }
+id: session_recording
+label: 'Session <> Recording'
+enabled: true
+first_field: field_assoc_recordings_from_sess
+second_field: field_associated_session
+bundles:
+  media:
+    - audio
+  node:
+    - session

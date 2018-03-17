@@ -11,5 +11,4 @@ is_admin: false
 permissions:
   - 'administer node display'
   - 'administer panelizer'
-  - 'administer panelizer node page defaults'
   - 'administer panelizer node song defaults'

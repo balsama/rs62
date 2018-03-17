@@ -1,0 +1,52 @@
+uuid: c998f1df-329a-427c-b00a-1e9cac3cb668
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.ief_from_song
+    - core.entity_form_mode.node.ief_song_recording_session
+    - field.field.media.audio.field_associated_session
+    - field.field.media.audio.field_associated_song
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_notes
+    - field.field.media.audio.field_plus_1
+    - media.type.audio
+  module:
+    - file
+    - inline_entity_form
+_core:
+  default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
+id: media.audio.ief_from_song
+targetEntityType: media
+bundle: audio
+mode: ief_from_song
+content:
+  field_associated_session:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: ief_song_recording_session
+      override_labels: true
+      label_singular: Session
+      label_plural: Sessions
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+  field_media_audio_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  field_associated_song: true
+  field_notes: true
+  field_plus_1: true
+  name: true
+  path: true
+  status: true
+  uid: true

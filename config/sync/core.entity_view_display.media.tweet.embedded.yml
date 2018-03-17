@@ -8,13 +8,7 @@ dependencies:
     - field.field.media.tweet.field_media_in_library
     - media.type.tweet
   module:
-    - field_layout
-    - layout_discovery
     - media_entity_twitter
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: 576jZt8I-8Q1YDaS7WRwUEkAFKl2XEXG9X6aS00uiEc
 id: media.tweet.embedded

@@ -1,0 +1,14 @@
+uuid: 911b194b-7735-457d-9968-d99c2d951b7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.session_creator
+  module:
+    - user
+id: user_add_role_action.session_creator
+label: 'Add the Session creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: session_creator

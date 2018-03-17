@@ -1,0 +1,12 @@
+uuid: 0358537a-a120-4b95-8c04-ae0cfdc8930b
+langcode: en
+status: true
+dependencies: {  }
+id: session_reviewer
+label: 'Session reviewer'
+weight: 14
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any session content'
+  - 'edit any session content'

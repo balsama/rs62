@@ -1,0 +1,52 @@
+uuid: aaedcf2f-2108-44b1-bba5-95df7e734a48
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.ief_song_recording_session
+    - field.field.node.session.body
+    - field.field.node.session.field_assoc_recordings_from_sess
+    - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_date
+    - node.type.session
+  module:
+    - datetime
+    - text
+id: node.session.ief_song_recording_session
+targetEntityType: node
+bundle: session
+mode: ief_song_recording_session
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_musicians:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_session_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  field_assoc_recordings_from_sess: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

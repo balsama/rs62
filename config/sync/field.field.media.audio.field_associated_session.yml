@@ -1,0 +1,28 @@
+uuid: 4ddb6e12-72c1-4caa-8316-9a958dce94b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_associated_session
+    - media.type.audio
+    - node.type.session
+id: media.audio.field_associated_session
+field_name: field_associated_session
+entity_type: media
+bundle: audio
+label: 'Associated Session'
+description: 'The session during which this was recorded. If you''re looking for a particular session, the are named by the date they were recorded in this format: <code><pre>Session YYYY-MM-DD-[RANDOM_HASH]</pre></code>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      session: session
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

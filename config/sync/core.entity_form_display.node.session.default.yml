@@ -1,0 +1,62 @@
+uuid: 0b2fd0ca-0f9c-4d1d-9718-55a9679ca84f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.ief
+    - field.field.node.session.body
+    - field.field.node.session.field_assoc_recordings_from_sess
+    - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_date
+    - node.type.session
+  module:
+    - datetime
+    - inline_entity_form
+    - text
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_assoc_recordings_from_sess:
+    type: inline_entity_form_simple
+    weight: 3
+    settings:
+      form_mode: ief
+      label_singular: ''
+      label_plural: ''
+      override_labels: false
+    region: content
+    third_party_settings: {  }
+  field_musicians:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_session_date:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

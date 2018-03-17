@@ -9,15 +9,9 @@ dependencies:
     - image.style.medium
     - media.type.image
   module:
-    - field_layout
     - image
-    - layout_discovery
     - lightning_media
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: iVmRBD7y3Gmddt29sSx9DwwH6Q4UaROqMu7FLyy_bvQ
 id: media.image.media_browser

@@ -3,23 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_form_mode.media.ief
+    - core.entity_form_mode.media.ief_from_song
     - field.field.node.song.body
-    - field.field.node.song.field_categories
-    - field.field.node.song.field_comments
+    - field.field.node.song.field_assoc_recordings_from_song
     - field.field.node.song.field_original_artist
-    - field.field.node.song.field_song
     - node.type.song
   module:
-    - comment
-    - field_layout
     - inline_entity_form
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.song.default
 targetEntityType: node
 bundle: song
@@ -34,21 +25,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  field_categories:
-    weight: 4
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_comments:
+  field_assoc_recordings_from_song:
+    type: inline_entity_form_simple
     weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
+    settings:
+      form_mode: ief_from_song
+      label_singular: ''
+      label_plural: ''
+      override_labels: false
     region: content
+    third_party_settings: {  }
   field_original_artist:
     weight: 3
     settings:
@@ -58,16 +44,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_song:
-    type: inline_entity_form_simple
-    weight: 1
-    settings:
-      form_mode: ief
-      override_labels: true
-      label_singular: 'Song track'
-      label_plural: 'Song tracks'
-    region: content
-    third_party_settings: {  }
   title:
     type: string_textfield
     weight: 0

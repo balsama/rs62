@@ -1,0 +1,28 @@
+uuid: 1d5a4fec-bca1-4be9-99f9-208d38e166a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assoc_recordings_from_song
+    - media.type.audio
+    - node.type.song
+id: node.song.field_assoc_recordings_from_song
+field_name: field_assoc_recordings_from_song
+entity_type: node
+bundle: song
+label: 'Associated Recordings'
+description: 'Individual recordings of this song.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference
