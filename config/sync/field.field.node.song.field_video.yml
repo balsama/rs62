@@ -1,0 +1,28 @@
+uuid: 4fb155c6-f7d7-429e-93dc-eea2f8dca064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - media.type.video
+    - node.type.song
+id: node.song.field_video
+field_name: field_video
+entity_type: node
+bundle: song
+label: Video
+description: 'The URL of a YouTube or Vimeo video of the song.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

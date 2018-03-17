@@ -6,7 +6,31 @@ dependencies:
     - comment.type.recording_notes
     - field.field.comment.recording_notes.comment_body
   module:
+    - layout_builder
+    - layout_discovery
     - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c5177f73-8392-41f8-b56d-c6e1ee3daa72:
+            uuid: c5177f73-8392-41f8-b56d-c6e1ee3daa72
+            region: content
+            configuration:
+              id: 'field_block:comment:recording_notes:comment_body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: comment.recording_notes.default
 targetEntityType: comment
 bundle: recording_notes

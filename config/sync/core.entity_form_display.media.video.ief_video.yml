@@ -1,0 +1,32 @@
+uuid: 62940857-6aa2-4518-9919-fac3a810571c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.ief_video
+    - field.field.media.video.field_media_in_library
+    - field.field.media.video.field_media_video_embed_field
+    - media.type.video
+  module:
+    - video_embed_field
+_core:
+  default_config_hash: OUea_b_jf81XjPvIY9J8KrRUckqz2APuLv4bkxYfdT4
+id: media.video.ief_video
+targetEntityType: media
+bundle: video
+mode: ief_video
+content:
+  field_media_video_embed_field:
+    type: video_embed_field_textfield
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  path: true
+  preview: true
+  status: true
+  uid: true

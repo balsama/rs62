@@ -10,6 +10,32 @@ dependencies:
     - media.type.tweet
   module:
     - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          dcd8698f-fa75-4cc2-b895-f23ee420cfa3:
+            uuid: dcd8698f-fa75-4cc2-b895-f23ee420cfa3
+            region: content
+            configuration:
+              id: 'field_block:media:tweet:thumbnail'
+              label_display: ''
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: medium
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 _core:
   default_config_hash: 7POQWMMGHaAd5G2_zxlo9bWG9g3LLLyKp0jUb6hvnHU
 id: media.tweet.thumbnail

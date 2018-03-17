@@ -10,8 +10,33 @@ dependencies:
     - field.field.node.session.field_session_date
     - node.type.session
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          e302fce1-6a20-4307-8ab6-3161808c1983:
+            uuid: e302fce1-6a20-4307-8ab6-3161808c1983
+            region: content
+            configuration:
+              id: 'field_block:node:session:body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.session.teaser
 targetEntityType: node
 bundle: session
@@ -28,6 +53,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_assoc_recordings_from_sess: true
   field_musicians: true

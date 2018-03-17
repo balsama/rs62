@@ -1,20 +1,20 @@
-uuid: 84ac9724-0d05-460c-b467-6ff26ec6d409
+uuid: 25297982-b635-40e7-b36a-3769d36bb5cf
 langcode: en
-status: false
+status: true
 dependencies:
   config:
+    - field.storage.media.field_associated_song
     - field.storage.media.field_media_audio_file
-    - field.storage.media.field_plus_1
     - media.type.audio
   module:
     - file
     - media
+    - node
     - user
-    - votingapi_widgets
-id: song_recordings
-label: 'Song Recordings'
+id: recording_list_sparse
+label: 'Recording List for Sessions'
 module: views
-description: ''
+description: 'A sparse table of recordings with a contextual filter for Session full node view.'
 tag: ''
 base_table: media_field_data
 base_field: mid
@@ -58,74 +58,17 @@ display:
           offset: 0
       style:
         type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            counter: counter
-            field_recorded_date: field_recorded_date
-            field_media_audio_file: field_media_audio_file
-            field_musicians: field_musicians
-            field_plus_1: field_plus_1
-            field_recorded_date_1: field_recorded_date_1
-          info:
-            counter:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_recorded_date:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_media_audio_file:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_musicians:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_plus_1:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_recorded_date_1:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
       fields:
-        counter:
-          id: counter
-          table: views
-          field: counter
+        field_associated_song:
+          id: field_associated_song
+          table: media__field_associated_song
+          field: field_associated_song
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Song Name'
           exclude: false
           alter:
             alter_text: false
@@ -158,7 +101,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -166,8 +109,21 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          counter_start: 1
-          plugin_id: counter
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_media_audio_file:
           id: field_media_audio_file
           table: media__field_media_audio_file
@@ -231,15 +187,15 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_plus_1:
-          id: field_plus_1
-          table: media__field_plus_1
-          field: field_plus_1
+        view_media:
+          id: view_media
+          table: media
+          field: view_media
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -274,29 +230,118 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: status
-          type: voting_api_formatter
-          settings:
-            style: default
-            readonly: 0
-            show_results: 1
-            show_own_vote: 0
-          group_column: status
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          text: recording
+          output_url_as_text: false
+          absolute: false
+          entity_type: media
+          plugin_id: entity_link
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: field_associated_song
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: song
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Custom text'
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'Details: [{{ view_media }}|{{ view_node }}]'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
       filters:
         status:
           value: '1'
@@ -319,29 +364,40 @@ display:
           entity_field: bundle
           plugin_id: bundle
       sorts:
-        field_recorded_date_value:
-          id: field_recorded_date_value
-          table: media__field_recorded_date
-          field: field_recorded_date_value
+        created:
+          id: created
+          table: media_field_data
+          field: created
+          order: DESC
+          entity_type: media
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
           exposed: false
           expose:
             label: ''
           granularity: second
-          plugin_id: datetime
-      title: 'Song Recordings'
+      title: 'Recording List for Sessions'
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
-      arguments:
-        field_associated_song_target_id:
-          id: field_associated_song_target_id
+      relationships:
+        field_associated_song:
+          id: field_associated_song
           table: media__field_associated_song
-          field: field_associated_song_target_id
+          field: field_associated_song
+          relationship: none
+          group_type: group
+          admin_label: 'field_associated_song: Content'
+          required: false
+          plugin_id: standard
+      arguments:
+        field_associated_session_target_id:
+          id: field_associated_session_target_id
+          table: media__field_associated_session
+          field: field_associated_session_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -373,7 +429,6 @@ display:
           not: false
           plugin_id: numeric
       display_extenders: {  }
-      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -382,8 +437,8 @@ display:
         - url
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_associated_song'
         - 'config:field.storage.media.field_media_audio_file'
-        - 'config:field.storage.media.field_plus_1'
   block_1:
     display_plugin: block
     id: block_1
@@ -399,5 +454,5 @@ display:
         - url
         - user.permissions
       tags:
+        - 'config:field.storage.media.field_associated_song'
         - 'config:field.storage.media.field_media_audio_file'
-        - 'config:field.storage.media.field_plus_1'

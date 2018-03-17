@@ -28,6 +28,7 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  layout_builder: 0
   layout_discovery: 0
   lightning_core: 0
   lightning_media: 0
@@ -46,6 +47,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  quickedit: 0
   rdf: 0
   responsive_favicons: 0
   system: 0

@@ -1,32 +1,38 @@
-uuid: b5cfd6c6-78fc-4613-8b19-a15641ae9a9a
+uuid: e946bc5b-c8b9-42bd-b975-e34fec7757ee
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
     - field.field.node.session.field_session_date
     - node.type.session
+    - views.view.recording_list_sparse
   module:
+    - ctools_block
     - datetime
     - layout_builder
     - layout_discovery
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: layout_twocol
         layout_settings: {  }
         components:
-          fe068308-90f5-4e51-8c50-4bd966642bb9:
-            uuid: fe068308-90f5-4e51-8c50-4bd966642bb9
-            region: content
+          12cdddba-5d77-40b2-951e-a2d1f16b5ab0:
+            uuid: 12cdddba-5d77-40b2-951e-a2d1f16b5ab0
+            region: top
             configuration:
               id: 'field_block:node:session:body'
-              label_display: ''
+              label: Notes
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
                 type: text_default
@@ -36,60 +42,61 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          d7f2cd0e-7d49-4574-95d9-245e9f71b915:
-            uuid: d7f2cd0e-7d49-4574-95d9-245e9f71b915
-            region: content
+          ae850506-1c52-434d-84bd-58267582c138:
+            uuid: ae850506-1c52-434d-84bd-58267582c138
+            region: first
             configuration:
               id: 'field_block:node:session:field_session_date'
-              label_display: ''
+              label: 'Recorded on'
+              provider: layout_builder
+              label_display: visible
               formatter:
-                label: above
-                settings:
-                  format_type: medium
-                  timezone_override: ''
-                third_party_settings: {  }
+                label: hidden
                 type: datetime_default
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
-          ad9b09a9-faf2-42fb-ba79-88bba79aa3d5:
-            uuid: ad9b09a9-faf2-42fb-ba79-88bba79aa3d5
-            region: content
+          a7a702b2-168f-42d2-b95d-53e3497bdc39:
+            uuid: a7a702b2-168f-42d2-b95d-53e3497bdc39
+            region: first
             configuration:
-              id: 'field_block:node:session:field_musicians'
-              label_display: ''
+              id: 'entity_field:node:field_musicians'
+              label: Musicians
+              provider: ctools_block
+              label_display: visible
               formatter:
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
+                label: hidden
                 type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings: {  }
+                weight: 0
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
             weight: 2
-          508833ad-f994-4ee2-a7f5-7693d0fa5125:
-            uuid: 508833ad-f994-4ee2-a7f5-7693d0fa5125
-            region: content
+          a2ae4cf3-1bc8-4e0d-9bc5-748e77e75201:
+            uuid: a2ae4cf3-1bc8-4e0d-9bc5-748e77e75201
+            region: second
             configuration:
-              id: 'field_block:node:session:field_assoc_recordings_from_sess'
-              label_display: ''
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
+              id: 'views_block:recording_list_sparse-block_1'
+              label: 'Songs Recorded'
+              provider: views
+              label_display: visible
+              views_label: 'Songs Recorded'
+              items_per_page: none
+              context_mapping: {  }
             additional: {  }
-            weight: 3
-id: node.session.default
+            weight: 0
+id: node.session.full
 targetEntityType: node
 bundle: session
-mode: default
+mode: full
 content:
   body:
     label: hidden
@@ -101,15 +108,15 @@ content:
   field_assoc_recordings_from_sess:
     type: entity_reference_entity_view
     weight: 105
-    label: above
+    label: hidden
     settings:
-      view_mode: default
+      view_mode: embedded
       link: false
     third_party_settings: {  }
     region: content
   field_musicians:
     weight: 104
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -117,7 +124,7 @@ content:
     region: content
   field_session_date:
     weight: 103
-    label: above
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
