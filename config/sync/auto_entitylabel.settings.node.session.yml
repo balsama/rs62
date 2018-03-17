@@ -1,5 +1,5 @@
 status: '1'
-pattern: 'Session [node:field_session_date:date:html_date] [random:hash:sha512]'
+pattern: 'Session [node:field_session_date:date:html_date]'
 php: 0
 escape: 0
 dependencies:
