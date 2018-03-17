@@ -4,14 +4,11 @@ module:
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
-  block_content: 0
   breakpoint: 0
   cer: 0
   ckeditor: 0
-  color: 0
   comment: 0
   config: 0
-  contact: 0
   contextual: 0
   ctools: 0
   ctools_block: 0
@@ -23,18 +20,16 @@ module:
   entity_browser: 0
   entity_embed: 0
   field: 0
-  field_layout: 0
   field_ui: 0
   file: 0
   filter: 0
   google_analytics: 0
-  help: 0
+  hide_revision_field: 0
   history: 0
   image: 0
   inline_entity_form: 0
   layout_discovery: 0
   lightning_core: 0
-  lightning_layout: 0
   lightning_media: 0
   lightning_media_image: 0
   lightning_media_instagram: 0
@@ -50,12 +45,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
-  panelizer: 0
-  panelizer_quickedit: 0
-  panels: 0
-  panels_ipe: 0
   path: 0
-  quickedit: 0
   rdf: 0
   responsive_favicons: 0
   system: 0
@@ -63,7 +53,6 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   update: 0
   user: 0
   video_embed_field: 0
@@ -80,7 +69,7 @@ theme:
   stable: 0
   classy: 0
   seven: 0
-  bootstrap: 0
+  adminimal_theme: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

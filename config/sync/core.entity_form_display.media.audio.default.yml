@@ -3,23 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.audio.field_associated_session
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_musicians
     - field.field.media.audio.field_notes
     - field.field.media.audio.field_plus_1
-    - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
-    - comment
-    - datetime
-    - field_layout
     - file
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+    - inline_entity_form
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
 id: media.audio.default
@@ -27,54 +19,38 @@ targetEntityType: media
 bundle: audio
 mode: default
 content:
-  field_associated_song:
-    weight: 4
+  field_associated_session:
+    weight: 2
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_simple
+    region: content
+  field_associated_song:
+    weight: 1
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
     region: content
   field_media_audio_file:
-    weight: 1
+    weight: 0
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_musicians:
-    weight: 3
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_notes:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  field_recorded_date:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  name:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: 'The name of this specific recording of the song.'
-    third_party_settings: {  }
 hidden:
   created: true
+  field_notes: true
   field_plus_1: true
+  name: true
   path: true
   status: true
   uid: true

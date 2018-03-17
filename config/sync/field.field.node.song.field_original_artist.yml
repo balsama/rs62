@@ -11,8 +11,8 @@ field_name: field_original_artist
 entity_type: node
 bundle: song
 label: 'Original Artist'
-description: ''
-required: false
+description: 'The person or group that originally recorded the song. Use "<code>RS62</code>" for original songs.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

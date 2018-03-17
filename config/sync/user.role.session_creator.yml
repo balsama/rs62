@@ -1,0 +1,24 @@
+uuid: 4a0048ba-e6db-4052-a1b5-2a480af20bf6
+langcode: en
+status: true
+dependencies: {  }
+id: session_creator
+label: 'Session creator'
+weight: 13
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node session content'
+  - 'administer panelizer node session layout'
+  - 'change layouts in place editing'
+  - 'create session content'
+  - 'create url aliases'
+  - 'edit own session content'
+  - 'use text format rich_text'
+  - 'view own unpublished content'
+  - 'view session revisions'

@@ -1,12 +1,12 @@
-uuid: bd4d3ffc-0e06-44e7-8308-a70d0b0ab46d
+uuid: 8b665cf6-3c48-4266-90be-9ee1e239d950
 langcode: en
 status: true
 dependencies: {  }
 id: song_recording
 label: 'Song <> Recording'
 enabled: true
-first_field: field_associated_song
-second_field: field_song
+first_field: field_assoc_recordings_from_song
+second_field: field_associated_song
 bundles:
   media:
     - audio

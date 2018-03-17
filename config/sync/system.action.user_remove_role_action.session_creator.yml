@@ -1,0 +1,14 @@
+uuid: c671c4d5-b04e-46c3-acf0-6b4a4175f8d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.session_creator
+  module:
+    - user
+id: user_remove_role_action.session_creator
+label: 'Remove the Session creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: session_creator

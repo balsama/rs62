@@ -5,33 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.song.body
-    - field.field.node.song.field_categories
+    - field.field.node.song.field_assoc_recordings_from_song
     - field.field.node.song.field_original_artist
-    - field.field.node.song.field_song
     - node.type.song
   module:
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: node.song.teaser
 targetEntityType: node
 bundle: song
 mode: teaser
-content:
-  field_song:
-    type: entity_reference_entity_view
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      view_mode: teaser
-      link: false
-    third_party_settings: {  }
+content: {  }
 hidden:
   body: true
-  field_categories: true
-  field_comments: true
+  field_assoc_recordings_from_song: true
   field_original_artist: true
   links: true

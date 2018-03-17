@@ -1,0 +1,28 @@
+uuid: ad7ddfb0-8100-4c5b-82f8-8b8e41ee51d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_assoc_recordings_from_sess
+    - media.type.audio
+    - node.type.session
+id: node.session.field_assoc_recordings_from_sess
+field_name: field_assoc_recordings_from_sess
+entity_type: node
+bundle: session
+label: 'Associated Recordings'
+description: 'The recordings that took place at this Session. <strong>Use the "<em>Add another item</em>" button to add multiple recordings.</strong>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

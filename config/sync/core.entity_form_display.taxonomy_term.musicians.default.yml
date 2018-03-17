@@ -7,10 +7,6 @@ dependencies:
   module:
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 id: taxonomy_term.musicians.default
 targetEntityType: taxonomy_term
 bundle: musicians

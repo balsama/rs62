@@ -1,20 +1,17 @@
 uuid: 787b573a-050e-4d8f-be2a-643e5ee84d60
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.teaser
+    - field.field.media.audio.field_associated_session
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_musicians
-    - field.field.media.audio.field_recorded_date
+    - field.field.media.audio.field_notes
+    - field.field.media.audio.field_plus_1
     - media.type.audio
   module:
     - file
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
 id: media.audio.teaser
@@ -35,10 +32,11 @@ content:
     region: content
 hidden:
   created: true
+  field_associated_session: true
   field_associated_song: true
-  field_musicians: true
+  field_notes: true
+  field_plus_1: true
   field_rate: true
-  field_recorded_date: true
   name: true
   thumbnail: true
   uid: true

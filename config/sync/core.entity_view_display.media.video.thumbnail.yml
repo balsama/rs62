@@ -9,13 +9,7 @@ dependencies:
     - image.style.medium
     - media.type.video
   module:
-    - field_layout
     - image
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
 _core:
   default_config_hash: n4pfwmyfbKw7UgpIu3-0jgMdizFM7lDE38pJCB5hnSI
 id: media.video.thumbnail

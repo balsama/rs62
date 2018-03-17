@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   module:
+    - hide_revision_field
     - menu_ui
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+  hide_revision_field:
+    hide: true
+    personalizable: false
 name: Song
 type: song
 description: 'A song we have or should record.'

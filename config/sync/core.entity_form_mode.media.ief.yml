@@ -7,8 +7,8 @@ dependencies:
     - media
 third_party_settings:
   lightning_core:
-    description: 'Minimal form for inline creation.'
+    description: 'Minimal form for inline creation from Session.'
 id: media.ief
-label: IEF
+label: 'IEF from Session'
 targetEntityType: media
 cache: true

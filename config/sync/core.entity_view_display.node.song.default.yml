@@ -3,126 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.song.body
-    - field.field.node.song.field_categories
-    - field.field.node.song.field_comments
+    - field.field.node.song.field_assoc_recordings_from_song
     - field.field.node.song.field_original_artist
-    - field.field.node.song.field_song
     - node.type.song
   module:
-    - comment
-    - field_layout
-    - layout_discovery
-    - panelizer
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
-  panelizer:
-    enable: true
-    custom: false
-    allow: false
-    default: default
-    displays:
-      default:
-        blocks:
-          0544cd5c-9ae3-4503-ae78-1dffc788434f:
-            id: 'entity_field:node:body'
-            label: Description
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: text_default
-              settings: {  }
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top
-            weight: -8
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 0544cd5c-9ae3-4503-ae78-1dffc788434f
-          8011f799-cfb6-4020-a2bc-149269aa060f:
-            id: 'entity_field:node:field_categories'
-            label: Categories
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_label
-              settings:
-                link: true
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: first
-            weight: -2
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 8011f799-cfb6-4020-a2bc-149269aa060f
-          90201941-dfa2-4045-beed-5314798a1d3e:
-            id: 'entity_field:node:field_original_artist'
-            label: 'Original Artist'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_label
-              settings:
-                link: true
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: first
-            weight: -1
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 90201941-dfa2-4045-beed-5314798a1d3e
-          1d1c50fd-2f8f-4b2e-9b08-953ff001985e:
-            id: 'views_block:song_recordings-block_1'
-            label: Recordings
-            provider: views
-            label_display: visible
-            views_label: Recordings
-            items_per_page: none
-            region: bottom
-            weight: -2
-            uuid: 1d1c50fd-2f8f-4b2e-9b08-953ff001985e
-            context_mapping: {  }
-          98aeaa62-37e5-40fd-91ea-4589f17dbfcb:
-            id: 'entity_field:node:field_comments'
-            label: Comments
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: comment_default
-              settings:
-                view_mode: default
-                pager_id: 0
-              third_party_settings: {  }
-              weight: 0
-            region: bottom
-            weight: -1
-            uuid: 98aeaa62-37e5-40fd-91ea-4589f17dbfcb
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-        id: panels_variant
-        label: Default
-        uuid: a9aca01b-82f3-4cbe-a65c-659e4182c8b8
-        weight: 0
-        layout: layout_twocol
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:song:default:default'
-        builder: standard
-        pattern: panelizer
-        static_context: {  }
 id: node.song.default
 targetEntityType: node
 bundle: song
@@ -131,47 +18,26 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_categories:
-    weight: 104
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_comments:
-    weight: 105
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  field_original_artist:
-    weight: 103
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_song:
+  field_assoc_recordings_from_song:
     type: entity_reference_entity_view
-    weight: 102
+    weight: 3
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
+  field_original_artist:
+    weight: 2
+    label: above
+    settings:
+      link: true
     third_party_settings: {  }
-hidden: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  links: true

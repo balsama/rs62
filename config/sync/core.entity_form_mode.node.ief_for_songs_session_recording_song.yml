@@ -1,0 +1,14 @@
+uuid: 71578453-99fd-4b9d-b3ff-4f1454d3bd39
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Songs that are created from recordings from Sessions should not have a field for Session.'
+id: node.ief_for_songs_session_recording_song
+label: 'IEF for Songs: Session -> Recording -> Song'
+targetEntityType: node
+cache: true

@@ -1,0 +1,14 @@
+uuid: d67e96cf-ffe2-4a50-b985-0c6c7f6da9b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'Minimal form for creation from within a Song.'
+id: media.ief_from_song
+label: 'IEF From Song'
+targetEntityType: media
+cache: true

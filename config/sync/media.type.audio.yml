@@ -1,7 +1,13 @@
 uuid: 6d3e469c-1370-4687-a246-89ba2f7c7211
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - hide_revision_field
+third_party_settings:
+  hide_revision_field:
+    hide: true
+    personalizable: false
 _core:
   default_config_hash: RQ75tMARZvKiI0hge9SKZpZFi-dOzZyq0nlouHHBeLM
 id: audio

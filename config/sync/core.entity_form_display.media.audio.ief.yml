@@ -4,21 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.ief
+    - core.entity_form_mode.node.ief_for_songs_session_recording_song
+    - field.field.media.audio.field_associated_session
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_musicians
+    - field.field.media.audio.field_notes
     - field.field.media.audio.field_plus_1
-    - field.field.media.audio.field_recorded_date
     - media.type.audio
   module:
-    - datetime
-    - field_layout
     - file
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings: {  }
+    - inline_entity_form
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
 id: media.audio.ief
@@ -26,40 +21,32 @@ targetEntityType: media
 bundle: audio
 mode: ief
 content:
-  field_media_audio_file:
+  field_associated_song:
+    type: inline_entity_form_complex
     weight: 1
+    region: content
+    settings:
+      form_mode: ief_for_songs_session_recording_song
+      override_labels: true
+      label_singular: Song
+      label_plural: Songs
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+  field_media_audio_file:
+    weight: 0
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_musicians:
-    type: entity_reference_autocomplete_tags
-    weight: 2
-    region: content
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_recorded_date:
-    type: datetime_default
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: 'Name of individual recording. Song name is usually recorded by Title above.'
-    third_party_settings: {  }
 hidden:
   created: true
-  field_associated_song: true
+  field_associated_session: true
+  field_notes: true
   field_plus_1: true
+  name: true
   path: true
   status: true
   uid: true

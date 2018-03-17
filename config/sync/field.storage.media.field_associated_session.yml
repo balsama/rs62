@@ -1,0 +1,20 @@
+uuid: 47a1ceb9-b66a-4240-a3c0-3c4b30f80654
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: media.field_associated_session
+field_name: field_associated_session
+entity_type: media
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
