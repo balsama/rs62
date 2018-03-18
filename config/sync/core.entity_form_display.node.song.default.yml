@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.ief_from_song
     - core.entity_form_mode.media.ief_video
     - field.field.node.song.body
     - field.field.node.song.field_assoc_recordings_from_song
@@ -27,12 +28,15 @@ content:
     third_party_settings: {  }
     region: content
   field_assoc_recordings_from_song:
-    type: inline_entity_form_simple
+    type: inline_entity_form_complex
     weight: 4
     settings:
       form_mode: ief_from_song
       label_singular: ''
       label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
       override_labels: false
     region: content
     third_party_settings: {  }

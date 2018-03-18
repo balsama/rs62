@@ -58,9 +58,22 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          72ca81e0-893b-4f77-9f47-2a868bdc5980:
+            uuid: 72ca81e0-893b-4f77-9f47-2a868bdc5980
+            region: first
+            configuration:
+              id: 'views_block:recording_list_for_songs-block_1'
+              label: 'Recordings of this song'
+              provider: views
+              label_display: visible
+              views_label: 'Recordings of this song'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 2
           8c23ae53-1b08-4df2-b346-1506e42438e4:
             uuid: 8c23ae53-1b08-4df2-b346-1506e42438e4
-            region: first
+            region: top
             configuration:
               id: 'entity_field:node:field_original_artist'
               label: 'Original Artist'
@@ -76,20 +89,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
-          72ca81e0-893b-4f77-9f47-2a868bdc5980:
-            uuid: 72ca81e0-893b-4f77-9f47-2a868bdc5980
-            region: first
-            configuration:
-              id: 'views_block:recording_list_for_songs-block_1'
-              label: 'Recordings of this song'
-              provider: views
-              label_display: visible
-              views_label: 'Recordings of this song'
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 2
+            weight: 1
 id: node.song.default
 targetEntityType: node
 bundle: song

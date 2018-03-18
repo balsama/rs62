@@ -1,23 +1,23 @@
-uuid: 132c4239-6eb9-456e-bda0-83b0aa743850
+uuid: 24aab5a8-7464-4627-bb64-1bd87a86d935
 langcode: en
 status: true
 dependencies:
   module:
     - ctools
     - media
-id: recording_song_and_date_
-label: 'Recording song and date.'
+id: recording_url
+label: 'Recording URL'
 type: 'canonical_entities:media'
-pattern: '[media:field_associated_song]/[media:field_recorded_date]'
+pattern: 'sessions/[media:field_associated_session]/[media:field_associated_song]'
 selection_criteria:
-  407bfdff-af35-466c-9887-2fab7441a253:
+  cae794e9-1122-4770-9ce3-2e93931edf51:
     id: 'entity_bundle:media'
     bundles:
       audio: audio
     negate: false
     context_mapping:
       media: media
-    uuid: 407bfdff-af35-466c-9887-2fab7441a253
+    uuid: cae794e9-1122-4770-9ce3-2e93931edf51
 selection_logic: and
 weight: -5
 relationships: {  }

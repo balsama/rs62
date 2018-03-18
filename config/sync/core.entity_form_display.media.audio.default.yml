@@ -11,6 +11,7 @@ dependencies:
   module:
     - file
     - inline_entity_form
+    - path
 _core:
   default_config_hash: RyyyRmiREZqnypsWhFFLYjMH0WRej2Pe8-H-8wh1o-Q
 id: media.audio.default
@@ -45,10 +46,15 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   field_notes: true
   name: true
-  path: true
   status: true
   uid: true

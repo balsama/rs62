@@ -7,16 +7,16 @@ dependencies:
 id: sessions_with_date
 label: 'Sessions with date'
 type: 'canonical_entities:node'
-pattern: 'sessions/[node:field_session_date:date:html_date]'
+pattern: 'sessions/session-[node:field_session_date:date:html_date]'
 selection_criteria:
-  7b03e0b8-2e83-4ef4-949f-4a9edae1fc74:
+  d2b5ff4a-00f1-4358-a9fa-c2c1ee478f4f:
     id: node_type
     bundles:
       session: session
     negate: false
     context_mapping:
       node: node
-    uuid: 7b03e0b8-2e83-4ef4-949f-4a9edae1fc74
+    uuid: d2b5ff4a-00f1-4358-a9fa-c2c1ee478f4f
 selection_logic: and
 weight: -5
 relationships: {  }
