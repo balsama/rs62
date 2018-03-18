@@ -1,15 +1,15 @@
-uuid: d6e85eab-2973-4c0d-b09b-d35d95dcadb3
+uuid: bddad887-23b6-4eaf-bbd4-a6103a90d657
 langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
+    - rs62
 _core:
   default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
-id: adminimal_theme_page_title
-theme: adminimal_theme
+id: rs62_page_title
+theme: rs62
 region: header
-weight: -3
+weight: -2
 provider: null
 plugin: page_title_block
 settings:

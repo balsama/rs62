@@ -1,15 +1,15 @@
-uuid: d7d64122-ea2b-4b09-af3c-722d2068f150
+uuid: 22361cda-15cd-4f74-8c35-d1cb2ef7fe8a
 langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
+    - rs62
 _core:
   default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
-id: adminimal_theme_primary_local_tasks
-theme: adminimal_theme
+id: rs62_primary_local_tasks
+theme: rs62
 region: header
-weight: -2
+weight: -1
 provider: null
 plugin: local_tasks_block
 settings:

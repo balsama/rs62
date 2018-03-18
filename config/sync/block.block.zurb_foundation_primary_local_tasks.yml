@@ -1,15 +1,15 @@
-uuid: d7d64122-ea2b-4b09-af3c-722d2068f150
+uuid: 52d91013-f2a1-40a9-b1d2-e8dfa50791b9
 langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
+    - zurb_foundation
 _core:
   default_config_hash: CyX_aDKAka2_eihevNLscCHDYrzDgIqwWzFVEFRKIww
-id: adminimal_theme_primary_local_tasks
-theme: adminimal_theme
+id: zurb_foundation_primary_local_tasks
+theme: zurb_foundation
 region: header
-weight: -2
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

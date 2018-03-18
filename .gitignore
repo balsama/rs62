@@ -21,3 +21,6 @@
 
 # Config
 /.behat.yml
+
+# Front end
+.sass-cache
