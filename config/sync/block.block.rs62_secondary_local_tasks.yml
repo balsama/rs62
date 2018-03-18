@@ -9,7 +9,7 @@ _core:
 id: rs62_secondary_local_tasks
 theme: rs62
 region: pre_content
-weight: -4
+weight: 1
 provider: null
 plugin: local_tasks_block
 settings:

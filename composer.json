@@ -35,6 +35,7 @@
         "drupal/lightning_layout": "^1.1",
         "drupal/lightning_media": "2.1.0",
         "drupal/lightning_workflow": "1.1.0",
+        "drupal/material_admin": "^1.0@alpha",
         "drupal/media_entity_audio": "2.0.0-alpha1",
         "drupal/responsive_favicons": "^1.4",
         "drupal/token": "^1.1",

@@ -140,8 +140,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"card-title\">\n{{ field_session_date }}\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -455,8 +455,8 @@ display:
           label: ''
           exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"card-action\">\n<ul class=\"operations clearfix\"><li>\n{{ view_node_1 }}\n</li></ul>\n</div>"
             make_link: false
             path: ''
             absolute: false

@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Theme override to display a single views grouping.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ */
+#}
+{% if grouping_level == 0 %}
+  <div class="col s12 m6 l4 xl3">
+  <div class="view-grouping card large sticky-action">
+  <div class="card-content">
+{% elseif grouping_level == 1 %}
+  <div class="view-grouping highlight">
+{% else %}
+  <div class="view-grouping">
+{% endif %}
+    <div class="view-grouping-header">{{ title }}</div>
+    <div class="view-grouping-content">{{ content }}</div>
+  </div>
+{% if grouping_level == 0 %}
+  </div>
+  </div>
+{% endif %}

@@ -1,8 +1,8 @@
 name: RS62
 type: theme
-description: 'Drupal administration theme with modern minimalist design.'
+description: 'The grooves! They re just too crunchy!'
 # core: 8.x
-base theme: adminimal_theme
+base theme: material_admin
 
 libraries:
   - rs62/global-styling

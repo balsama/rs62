@@ -1,17 +1,17 @@
-uuid: b6fcc976-f749-4f5b-a06f-1e5a2d77596b
+uuid: 8901b9a6-b182-4d41-95ad-0567f61d7c75
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - rs62
+    - bootstrap
 _core:
-  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
-id: rs62_messages
-theme: rs62
-region: highlighted
-weight: 3
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: bootstrap_messages
+theme: bootstrap
+region: header
+weight: -50
 provider: null
 plugin: system_messages_block
 settings:

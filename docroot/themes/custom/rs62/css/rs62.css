@@ -1,38 +1,6 @@
-.view-content > {
-  display: flex;
-  width: 100%; }
-  .view-content > .view-grouping {
-    flex: 1;
-    box-sizing: border-box;
-    height: 300px;
-    margin: 8px 1% 8px 0;
-    padding: 9px;
-    background: #f8f8f8;
-    border: 1px solid #ccc;
-    position: relative; }
-    @media all and (min-width: 600px) {
-      .view-content > .view-grouping {
-        float: left;
-        width: 49%; } }
-    @media all and (min-width: 900px) {
-      .view-content > .view-grouping {
-        width: 24%; } }
-    .view-content > .view-grouping time {
-      font-size: 1.6em;
-      font-weight: 800; }
-    .view-content > .view-grouping h3 {
-      font-size: 1em; }
-      .view-content > .view-grouping h3 a {
-        background-color: #f0f0f0;
-        bottom: 9px;
-        border: 1px solid #ccc;
-        display: block;
-        padding: 1px 3px;
-        position: absolute;
-        right: 9px; }
-        .view-content > .view-grouping h3 a:hover {
-          background-color: #e2e2e2;
-          text-decoration: none; }
+.card-content .highlight > .view-grouping-header {
+  color: #ffab40;
+  margin-bottom: 8px; }
 
 .menu--main ul li {
   list-style: none; }

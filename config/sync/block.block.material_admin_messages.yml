@@ -1,17 +1,17 @@
-uuid: b6fcc976-f749-4f5b-a06f-1e5a2d77596b
+uuid: 200e06f3-2ee5-493e-b5ef-10292939bf34
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - rs62
+    - material_admin
 _core:
-  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
-id: rs62_messages
-theme: rs62
-region: highlighted
-weight: 3
+  default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
+id: material_admin_messages
+theme: material_admin
+region: status
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:
