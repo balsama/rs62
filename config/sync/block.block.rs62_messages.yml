@@ -1,0 +1,22 @@
+uuid: b6fcc976-f749-4f5b-a06f-1e5a2d77596b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rs62
+_core:
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: rs62_messages
+theme: rs62
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ad41459ba6899f72e0912e88e25909c",
+    "content-hash": "e80817d8ae159ccabd4a5fd8a97c42f2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1286,6 +1286,89 @@
             }
         },
         {
+            "name": "drupal/basic",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/basic",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/basic-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "d42e75327d54ae38cf988ebe77f995b44fbc45f7"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1508096944",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Krueger",
+                    "homepage": "http://thejibe.com",
+                    "email": "steve@thejibe.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Joël Pittet",
+                    "homepage": "https://www.drupal.org/u/joelpittet",
+                    "email": "joel@pittet.ca",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Leah Wagner",
+                    "homepage": "http://thejibe.com",
+                    "email": "leah@thejibe.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Catherine Winters",
+                    "homepage": "http://www.catherinewinters.com",
+                    "email": "catherine@catherinewinters.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Johannes Schmidt",
+                    "homepage": "http://2tabs.com",
+                    "email": "mail@2tabs.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "johannez",
+                    "homepage": "https://www.drupal.org/user/670988"
+                },
+                {
+                    "name": "leahtard",
+                    "homepage": "https://www.drupal.org/user/683812"
+                }
+            ],
+            "description": "HTML5, SASS, Responsive grid starter theme.",
+            "homepage": "http://drupal.org/project/basic",
+            "support": {
+                "source": "http://cgit.drupalcode.org/basic",
+                "issues": "https://www.drupal.org/project/issues/basic",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/better_exposed_filters",
             "version": "3.0.0-alpha3",
             "source": {
@@ -1466,6 +1549,57 @@
             "homepage": "https://www.drupal.org/project/cer",
             "support": {
                 "source": "http://cgit.drupalcode.org/cer"
+            }
+        },
+        {
+            "name": "drupal/components",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/components",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "adb1872a655466d575c2d3396f7ca2daba0a2918"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1461060840",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                }
+            ],
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
+            "homepage": "https://www.drupal.org/project/components",
+            "support": {
+                "source": "http://cgit.drupalcode.org/components"
             }
         },
         {
@@ -4500,6 +4634,120 @@
                 "issues": "https://www.drupal.org/project/issues/votingapi_widgets"
             },
             "time": "2017-03-08T15:05:29+00:00"
+        },
+        {
+            "name": "drupal/zen",
+            "version": "7.0.0-alpha14",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/zen",
+                "reference": "8.x-7.0-alpha14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/zen-8.x-7.0-alpha14.zip",
+                "reference": "8.x-7.0-alpha14",
+                "shasum": "5e9c8f3d4a7c1867173f7219db3791c15b755899"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-7.x": "7.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-7.0-alpha14",
+                    "datestamp": "1464881343",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "JohnAlbin",
+                    "homepage": "https://www.drupal.org/user/32095"
+                },
+                {
+                    "name": "KrisBulman",
+                    "homepage": "https://www.drupal.org/user/190735"
+                },
+                {
+                    "name": "echoz",
+                    "homepage": "https://www.drupal.org/user/38665"
+                }
+            ],
+            "description": "Zen sub-themes are the ultimate starting themes for Drupal 8. Read the <a href=\"https://drupal.org/node/873778\">online docs</a> or the included README-FIRST.txt on how to create a theme with Zen.",
+            "homepage": "https://www.drupal.org/project/zen",
+            "support": {
+                "source": "http://cgit.drupalcode.org/zen"
+            }
+        },
+        {
+            "name": "drupal/zurb_foundation",
+            "version": "5.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/zurb-foundation",
+                "reference": "8.x-5.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/zurb_foundation-8.x-5.0-beta3.zip",
+                "reference": "8.x-5.0-beta3",
+                "shasum": "af7452eae8e66b4224a32344a3c91175044d7225"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-5.x": "5.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-5.0-beta3",
+                    "datestamp": "1487487784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Bcwald",
+                    "homepage": "https://www.drupal.org/user/215794"
+                },
+                {
+                    "name": "FlorisMoriceau",
+                    "homepage": "https://www.drupal.org/user/2627019"
+                },
+                {
+                    "name": "HongPong",
+                    "homepage": "https://www.drupal.org/user/60005"
+                },
+                {
+                    "name": "kevinquillen",
+                    "homepage": "https://www.drupal.org/user/317279"
+                }
+            ],
+            "description": "The most advanced responsive front-end framework in the world, now in Drupal! Based on Zurb Foundation version 5.x.",
+            "homepage": "https://www.drupal.org/project/zurb_foundation",
+            "support": {
+                "source": "http://cgit.drupalcode.org/zurb_foundation"
+            }
         },
         {
             "name": "easyrdf/easyrdf",
@@ -10472,6 +10720,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/votingapi_widgets": 20,
+        "drupal/zen": 15,
+        "drupal/zurb_foundation": 10,
         "acquia/lightning_dev": 20
     },
     "prefer-stable": true,

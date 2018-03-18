@@ -1,0 +1,22 @@
+uuid: 2c39f95b-d5ab-402a-bc2d-ed556db7e5b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - rs62
+_core:
+  default_config_hash: 80N66GdzEvwqi1m-_GZ-ulkk8AJG9beoXcZ4-pMVKjI
+id: rs62_content
+theme: rs62
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

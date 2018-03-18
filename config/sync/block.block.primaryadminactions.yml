@@ -1,15 +1,13 @@
-uuid: 9a44447c-78f3-4af0-803e-7fe3a03e2ea1
+uuid: a408e536-5ea8-4f6d-85b4-d5789abd2211
 langcode: en
 status: true
 dependencies:
   theme:
     - adminimal_theme
-_core:
-  default_config_hash: ik4PTMlBD0MWansnSMpSXq5SUlWRJ1IVVt6C7AIbQmc
-id: adminimal_theme_local_actions
+id: primaryadminactions
 theme: adminimal_theme
-region: content
-weight: -5
+region: header
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

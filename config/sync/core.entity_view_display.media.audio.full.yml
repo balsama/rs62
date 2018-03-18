@@ -1,9 +1,10 @@
-uuid: b6a69737-257b-4ec5-b342-d60adae756a0
+uuid: cd785dd8-cf70-40d8-b896-c5ac2277e50b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_display.comment.recording_notes.default
+    - core.entity_view_mode.media.full
     - field.field.media.audio.field_associated_session
     - field.field.media.audio.field_associated_song
     - field.field.media.audio.field_media_audio_file
@@ -19,6 +20,21 @@ dependencies:
 third_party_settings:
   layout_builder:
     sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          937e701e-aea4-4cfd-a209-7dda07605f7a:
+            uuid: 937e701e-aea4-4cfd-a209-7dda07605f7a
+            region: content
+            configuration:
+              id: page_title_block
+              label: 'Page title'
+              provider: core
+              label_display: visible
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
       -
         layout_id: layout_twocol
         layout_settings: {  }
@@ -39,20 +55,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 0
-          04d20f8c-12c4-4c9b-8739-bc673c811ab1:
-            uuid: 04d20f8c-12c4-4c9b-8739-bc673c811ab1
-            region: first
-            configuration:
-              id: 'views_block:recording_details-block_1'
-              label: ''
-              provider: views
-              label_display: '0'
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 3
+            weight: 1
           0fd37c3c-c1ce-47fd-9b7c-905181bb0c62:
             uuid: 0fd37c3c-c1ce-47fd-9b7c-905181bb0c62
             region: first
@@ -71,14 +74,43 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 4
+            weight: 0
+          92e5ec7d-c74d-4924-9dbb-193955073fe3:
+            uuid: 92e5ec7d-c74d-4924-9dbb-193955073fe3
+            region: top
+            configuration:
+              id: 'field_block:media:audio:field_associated_song'
+              label_display: ''
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          776a68b0-e98f-4d1b-a76f-6efe6bd0ac79:
+            uuid: 776a68b0-e98f-4d1b-a76f-6efe6bd0ac79
+            region: first
+            configuration:
+              id: 'views_block:recording_details-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
     allow_custom: false
 _core:
   default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
-id: media.audio.default
+id: media.audio.full
 targetEntityType: media
 bundle: audio
-mode: default
+mode: full
 content:
   field_associated_song:
     type: entity_reference_label

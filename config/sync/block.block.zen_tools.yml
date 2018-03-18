@@ -1,0 +1,26 @@
+uuid: 4fb0de4b-de06-4232-8cb7-3a279db347ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - zen
+_core:
+  default_config_hash: VBnzEpmW32q2e-3Yx7JNuJ9gkzZQI59jNrF5dayVkhk
+id: zen_tools
+theme: zen
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

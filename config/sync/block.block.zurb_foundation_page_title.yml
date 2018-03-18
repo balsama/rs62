@@ -1,15 +1,15 @@
-uuid: d6e85eab-2973-4c0d-b09b-d35d95dcadb3
+uuid: 03376d32-1cac-4009-8fc9-561aa66c2934
 langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
+    - zurb_foundation
 _core:
   default_config_hash: Z3nlZUh2mSJP3apMrJWt-duS-aLyP79rcfu_0wpPmDs
-id: adminimal_theme_page_title
-theme: adminimal_theme
+id: zurb_foundation_page_title
+theme: zurb_foundation
 region: header
-weight: -3
+weight: -30
 provider: null
 plugin: page_title_block
 settings:
