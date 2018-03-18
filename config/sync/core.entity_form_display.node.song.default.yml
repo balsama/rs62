@@ -26,6 +26,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_assoc_recordings_from_song:
+    type: inline_entity_form_simple
+    weight: 4
+    settings:
+      form_mode: ief_from_song
+      label_singular: ''
+      label_plural: ''
+      override_labels: false
+    region: content
+    third_party_settings: {  }
   field_original_artist:
     weight: 2
     settings:
@@ -37,7 +47,7 @@ content:
     region: content
   field_video:
     type: inline_entity_form_simple
-    weight: 26
+    weight: 3
     settings:
       form_mode: ief_video
       label_singular: ''
@@ -55,7 +65,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_assoc_recordings_from_song: true
   path: true
   promote: true
   status: true

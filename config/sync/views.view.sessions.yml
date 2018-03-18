@@ -7,10 +7,14 @@ dependencies:
     - field.storage.node.field_musicians
     - field.storage.node.field_session_date
     - node.type.session
+    - system.menu.main
+    - taxonomy.vocabulary.musicians
   module:
+    - better_exposed_filters
     - datetime
     - media
     - node
+    - taxonomy
     - text
     - user
 id: sessions
@@ -44,15 +48,39 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
-          submit_button: Apply
-          reset_button: false
+          submit_button: Search
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Select any filter and click on Apply to see results'
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: false
+              autosubmit_hide: false
+            field_session_date_value:
+              bef_format: bef_datepicker
+              more_options:
+                is_secondary: false
+            field_musicians_target_id:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            title:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                placeholder_text: 'Session contains song...'
+          text_input_required_format: rich_text
       pager:
         type: mini
         options:
@@ -550,6 +578,158 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_session_date_value:
+          id: field_session_date_value
+          table: node__field_session_date
+          field: field_session_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_session_date_value_op
+            label: 'Session Date'
+            description: ''
+            use_operator: false
+            operator: field_session_date_value_op
+            identifier: field_session_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              layout_manager: '0'
+              media_creator: '0'
+              media_manager: '0'
+              song_creator: '0'
+              song_reviewer: '0'
+              session_creator: '0'
+              session_reviewer: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_musicians_target_id:
+          id: field_musicians_target_id
+          table: node__field_musicians
+          field: field_musicians_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_musicians_target_id_op
+            label: 'With Musicians'
+            description: ''
+            use_operator: false
+            operator: field_musicians_target_id_op
+            identifier: field_musicians_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              layout_manager: '0'
+              media_creator: '0'
+              media_manager: '0'
+              song_creator: '0'
+              song_reviewer: '0'
+              session_creator: '0'
+              session_reviewer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: musicians
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_associated_song
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Song
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              layout_manager: '0'
+              media_creator: '0'
+              media_manager: '0'
+              song_creator: '0'
+              song_reviewer: '0'
+              session_creator: '0'
+              session_reviewer: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
       sorts:
         field_session_date_value:
           id: field_session_date_value
@@ -596,7 +776,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -611,12 +793,23 @@ display:
     display_options:
       display_extenders: {  }
       path: sessions
+      menu:
+        type: normal
+        title: Sessions
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -50
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
