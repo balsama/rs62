@@ -15,10 +15,13 @@ entity_type: media
 bundle: video
 label: 'Video URL'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  allowed_providers: {  }
+  allowed_providers:
+    vimeo: '0'
+    youtube: '0'
+    youtube_playlist: '0'
 field_type: video_embed_field
