@@ -300,6 +300,8 @@ display:
           fields:
             - field_musicians
             - field_media_audio_file
+            - view_node_1
+            - view_node
             - view_media
             - comment_count
           wrapper: div
@@ -434,6 +436,112 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        view_node_1:
+          id: view_node_1
+          table: node
+          field: view_node
+          relationship: field_associated_song
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="waves-effect waves-light btn btn-flat">Song Details</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Song Details'
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
+        view_node:
+          id: view_node
+          table: node
+          field: view_node
+          relationship: field_associated_session
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<div class="waves-effect waves-light btn btn-flat">Session Details</div>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'Session Details'
+          output_url_as_text: false
+          absolute: false
+          entity_type: node
+          plugin_id: entity_link
         view_media:
           id: view_media
           table: media
@@ -565,6 +673,55 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+          group: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_associated_song
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Song
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              layout_manager: '0'
+              media_creator: '0'
+              media_manager: '0'
+              song_creator: '0'
+              song_reviewer: '0'
+              session_creator: '0'
+              session_reviewer: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
         field_musicians_target_id:
           id: field_musicians_target_id
           table: node__field_musicians
@@ -617,54 +774,6 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: field_associated_song
-          group_type: group
-          admin_label: ''
-          operator: contains
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: title_op
-            label: Song
-            description: ''
-            use_operator: false
-            operator: title_op
-            identifier: title
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              layout_manager: '0'
-              media_creator: '0'
-              media_manager: '0'
-              song_creator: '0'
-              song_reviewer: '0'
-              session_creator: '0'
-              session_reviewer: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: title
-          plugin_id: string
         field_session_date_value:
           id: field_session_date_value
           table: node__field_session_date
@@ -718,21 +827,20 @@ display:
             group_items: {  }
           plugin_id: datetime
       sorts:
-        created:
-          id: created
-          table: media_field_data
-          field: created
-          order: DESC
-          entity_type: media
-          entity_field: created
-          plugin_id: date
-          relationship: none
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_associated_song
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
-          granularity: second
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
       title: Recordings
       header: {  }
       footer: {  }
@@ -758,8 +866,12 @@ display:
           plugin_id: standard
       arguments: {  }
       display_extenders: {  }
-      use_ajax: true
+      use_ajax: false
       css_class: ''
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
