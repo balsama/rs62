@@ -17,6 +17,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_fieldsets
 id: recordings
 label: Recordings
 module: views
@@ -102,66 +103,22 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: table
+        type: default
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: title
+              rendered: true
+              rendered_strip: false
           row_class: ''
           default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_session_date: field_session_date
-            view_node: field_session_date
-            field_musicians: field_musicians
-            field_media_audio_file: field_media_audio_file
-            comment_count: comment_count
-          info:
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_session_date:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            view_node:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_musicians:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_media_audio_file:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            comment_count:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: '-1'
-          empty_table: false
       row:
         type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ' | '
+          hide_empty: false
       fields:
         title:
           id: title
@@ -170,8 +127,8 @@ display:
           relationship: field_associated_song
           group_type: group
           admin_label: ''
-          label: 'Song Name'
-          exclude: false
+          label: ''
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -203,7 +160,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -214,7 +171,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -235,7 +192,71 @@ display:
           relationship: field_associated_session
           group_type: group
           admin_label: ''
-          label: 'Recorded on'
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        fieldset:
+          id: fieldset
+          table: views
+          field: fieldset
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -276,75 +297,17 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: html_date
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        view_node:
-          id: view_node
-          table: node
-          field: view_node
-          relationship: field_associated_session
-          group_type: group
-          admin_label: ''
-          label: 'Session date'
-          exclude: false
-          alter:
-            alter_text: true
-            text: session
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: session
-          output_url_as_text: false
-          absolute: false
-          entity_type: node
-          plugin_id: entity_link
+          fields:
+            - field_musicians
+            - field_media_audio_file
+            - view_media
+            - comment_count
+          wrapper: div
+          legend: ''
+          classes: collapsible-body
+          collapsible: 0
+          collapsed: 0
+          plugin_id: fieldset
         field_musicians:
           id: field_musicians
           table: node__field_musicians
@@ -388,7 +351,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -404,8 +367,8 @@ display:
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
-          multi_type: separator
-          separator: ', '
+          multi_type: ul
+          separator: ''
           field_api_classes: false
           plugin_id: field
         field_media_audio_file:
@@ -471,63 +434,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        comment_count:
-          id: comment_count
-          table: comment_entity_statistics
-          field: comment_count
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Comments
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: true
-          format_plural_string: !!binary MSBjb21tZW50LANAY291bnQgY29tbWVudHMsIA==
-          prefix: ''
-          suffix: ''
-          plugin_id: numeric
         view_media:
           id: view_media
           table: media
@@ -539,7 +445,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ comment_count }} {{ view_media }} '
+            text: '<div class="waves-effect waves-light btn">Recording Details</div>'
             make_link: false
             path: ''
             absolute: false
@@ -576,11 +482,68 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Discuss
+          text: 'Recording Details'
           output_url_as_text: false
           absolute: false
           entity_type: media
           plugin_id: entity_link
+        comment_count:
+          id: comment_count
+          table: comment_entity_statistics
+          field: comment_count
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<span class="badge red white-text">{{ comment_count }}</span>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: true
+          format_plural_string: !!binary MSBjb21tZW50A0Bjb3VudCBjb21tZW50cw==
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
       filters:
         status:
           value: '1'
@@ -796,6 +759,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:

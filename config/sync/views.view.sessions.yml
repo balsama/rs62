@@ -456,7 +456,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"card-action\">\n<ul class=\"operations clearfix\"><li>\n{{ view_node_1 }}\n</li></ul>\n</div>"
+            text: "<div class=\"card-action waves-effect waves-effect-light\">\n<ul class=\"operations clearfix\"><li>\n{{ view_node_1 }}\n</li></ul>\n</div>"
             make_link: false
             path: ''
             absolute: false
