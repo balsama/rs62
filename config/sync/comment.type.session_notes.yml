@@ -1,0 +1,8 @@
+uuid: f9e8bc08-1e0f-43c2-bbc8-1330d52ebe33
+langcode: en
+status: true
+dependencies: {  }
+id: session_notes
+label: 'Session Notes'
+target_entity_type_id: node
+description: ''

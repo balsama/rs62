@@ -1,15 +1,13 @@
-uuid: 6fe89038-acfc-471b-afcb-042a2cb69ae8
+uuid: 0a8c7005-2338-44fe-8096-4280316800e3
 langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap
-_core:
-  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
-id: bootstrap_local_tasks
-theme: bootstrap
-region: header
-weight: 10
+    - rs62
+id: tabs
+theme: rs62
+region: pre_content
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

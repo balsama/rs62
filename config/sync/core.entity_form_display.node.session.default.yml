@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_comments
     - field.field.node.session.field_session_date
     - node.type.session
   module:
+    - comment
     - datetime
     - inline_entity_form
     - text
@@ -46,6 +48,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
+  field_session_comments:
+    type: comment_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_session_date:
     weight: 0
     settings: {  }
