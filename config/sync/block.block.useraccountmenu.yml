@@ -1,24 +1,24 @@
-uuid: ce0f8f9c-8a8c-4b2b-9aa3-16edac38582c
+uuid: 6555eafa-f202-41ab-9d1a-a4cba93eecab
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.account
   module:
     - system
   theme:
     - rs62
-id: mainnavigation
+id: useraccountmenu
 theme: rs62
 region: header
-weight: -5
+weight: -4
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }

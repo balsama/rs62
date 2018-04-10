@@ -47,6 +47,14 @@
   }
 }
 
+.menu--account {
+  display: block;
+  float: right;
+  a {
+    color: white;
+  }
+}
+
 .view-content {
   .views-field-title {
     h1.field-content {

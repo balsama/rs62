@@ -25,6 +25,12 @@
       clear: both;
       display: table; } }
 
+.menu--account {
+  display: block;
+  float: right; }
+  .menu--account a {
+    color: white; }
+
 .view-content .views-field-title h1.field-content {
   color: #424242; }
 
