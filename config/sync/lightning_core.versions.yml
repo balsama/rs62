@@ -44,3 +44,4 @@ hide_revision_field: 1.1.0
 quickedit: 0.0.0
 components: 1.0.0
 views_fieldsets: 3.3.0
+smtp: 1.0.0-beta3
