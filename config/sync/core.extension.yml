@@ -72,12 +72,7 @@ theme:
   stable: 0
   classy: 0
   seven: 0
-  adminimal_theme: 0
   rs62: 0
-  zurb_foundation: 0
-  basic: 0
-  zen: 0
-  bootstrap: 0
   material_admin: 0
 profile: minimal
 _core:

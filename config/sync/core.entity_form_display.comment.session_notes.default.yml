@@ -1,0 +1,29 @@
+uuid: 20a4167e-b074-47d7-aa87-65b67a72ffe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.session_notes
+    - field.field.comment.session_notes.comment_body
+  module:
+    - text
+id: comment.session_notes.default
+targetEntityType: comment
+bundle: session_notes
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  subject: true

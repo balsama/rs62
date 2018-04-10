@@ -1,0 +1,49 @@
+uuid: 66bfc178-5bb6-40bc-82c9-aa38fa0b3cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.session_notes
+    - field.field.comment.session_notes.comment_body
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+third_party_settings:
+  layout_builder:
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          5e7e0ff8-78d1-47b8-bc86-c7981b7682d5:
+            uuid: 5e7e0ff8-78d1-47b8-bc86-c7981b7682d5
+            region: content
+            configuration:
+              id: 'field_block:comment:session_notes:comment_body'
+              label_display: ''
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+id: comment.session_notes.default
+targetEntityType: comment
+bundle: session_notes
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

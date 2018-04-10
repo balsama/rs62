@@ -1,13 +1,13 @@
-uuid: a408e536-5ea8-4f6d-85b4-d5789abd2211
+uuid: bf1533fe-d091-4805-b976-b11048620a84
 langcode: en
 status: true
 dependencies:
   theme:
-    - adminimal_theme
-id: primaryadminactions
-theme: adminimal_theme
-region: header
-weight: -4
+    - rs62
+id: primaryadminactions_2
+theme: rs62
+region: pre_content
+weight: 0
 provider: null
 plugin: local_actions_block
 settings:

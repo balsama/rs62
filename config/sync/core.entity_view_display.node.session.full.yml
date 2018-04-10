@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_comments
     - field.field.node.session.field_session_date
     - node.type.session
     - views.view.recording_list_sparse
@@ -93,6 +94,25 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          f346d72d-d731-4209-b91b-49e77d48f59a:
+            uuid: f346d72d-d731-4209-b91b-49e77d48f59a
+            region: bottom
+            configuration:
+              id: 'field_block:node:session:field_session_comments'
+              label: 'Session Comments'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: comment_default
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
 id: node.session.full
 targetEntityType: node
 bundle: session
@@ -136,4 +156,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_session_comments: true

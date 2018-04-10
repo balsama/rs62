@@ -1,0 +1,20 @@
+uuid: 0536a62d-bcb0-48c1-a906-5b5a504bc7bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.field_session_comments
+field_name: field_session_comments
+entity_type: node
+type: comment
+settings:
+  comment_type: session_notes
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

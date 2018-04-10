@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_comments
     - field.field.node.session.field_session_date
     - node.type.session
   module:
+    - comment
     - datetime
     - layout_builder
     - layout_discovery
@@ -86,6 +88,23 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 3
+          a2db9256-abac-43c0-9338-753e3c1e78f7:
+            uuid: a2db9256-abac-43c0-9338-753e3c1e78f7
+            region: content
+            configuration:
+              id: 'field_block:node:session:field_session_comments'
+              label_display: ''
+              formatter:
+                label: above
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+                type: comment_default
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -114,6 +133,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_session_comments:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_session_date:
     weight: 103
