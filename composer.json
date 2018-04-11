@@ -1,6 +1,6 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "balsama/rs62",
+    "description": "Codebase for rs62.live website.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "repositories": [
@@ -15,6 +15,18 @@
         {
             "type": "vcs",
             "url": "https://github.com/acquia/lightning-dev"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "antennaio/jquery-bar-rating",
+                "version": "1.2.2",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+                }
+            }
         }
     ],
     "require": {
@@ -41,8 +53,8 @@
         "drupal/smtp": "^1.0@beta",
         "drupal/token": "^1.1",
         "drupal/views_fieldsets": "^3.3",
-        "drupal/votingapi": "3.0.0-alpha5",
-        "drupal/votingapi_widgets": "1.x-dev#97133dd",
+        "drupal/votingapi": "3.0.0-alpha6",
+        "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
         "drupal/zen": "^7.0@alpha",
         "drupal/zurb_foundation": "^5.0@beta",
         "webflo/drupal-finder": "^1.0.0",
@@ -91,10 +103,6 @@
         "enable-patching": true,
         "patches": {
             "drupal/votingapi_widgets": {
-                "2945497 - Like button widget":
-                "https://www.drupal.org/files/issues/votingapi_widgets-like-2945497-1.patch",
-                "Override templates":
-                "./patches/vote-widget-template-overrides.patch",
                 "Fix unloadable class const":
                 "./patches/unloadable-class-const.patch"
             },
