@@ -551,7 +551,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if title is empty %}\n<span class=\"brown-text\">{{ name }}</span> commented on the session recorded on {{ field_session_date }} {{ changed }}\n{% else %}\n<span class=\"brown-text\">{{ name }}</span> commented on a recording of <span class=\"brown-text\">{{ title }}</span> {{ changed }}\n{% endif %}"
+            text: "{% if title is empty %}\n<span class=\"blue-grey-text text-darken-2\">{{ name }}</span> commented on the session recorded on {{ field_session_date }} {{ changed }}\n{% else %}\n<span class=\"blue-grey-text text-darken-2\">{{ name }}</span> commented on a recording of <span class=\"blue-grey-text text-darken-2\">{{ title }}</span> {{ changed }}\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -577,7 +577,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: 'orange-text darken-1'
+          element_class: blue-grey-text
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
