@@ -1,0 +1,13 @@
+diff --git a/login_destination.module b/login_destination.module
+index 3fa5a08..30d6694 100644
+--- a/login_destination.module
++++ b/login_destination.module
+@@ -64,7 +64,7 @@ function login_destination_user_logout(AccountInterface $account) {
+  * Implements hook_toolbar_alter().
+  */
+ function login_destination_toolbar_alter(&$items) {
+-  if (empty($items['user']['tray']['user_links'])) {
++  if (empty($items['user']['tray']['user_links']['#links'])) {
+     return;
+   }
+   // Disable cache for user links in toolbar, to be able set current param.

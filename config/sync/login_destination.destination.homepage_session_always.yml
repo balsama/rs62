@@ -1,0 +1,17 @@
+uuid: 2fe52487-737e-4732-b16f-469883f804b1
+langcode: en
+status: true
+dependencies: {  }
+name: homepage_session_always
+label: 'Homepage (Session) always'
+triggers:
+  registration: registration
+  login: login
+  one-time-login: one-time-login
+  logout: logout
+destination_path: 'internal:/'
+pages_type: 0
+pages: ''
+roles: {  }
+weight: 0
+enabled: true

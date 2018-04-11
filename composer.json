@@ -47,6 +47,7 @@
         "drupal/lightning_layout": "^1.1",
         "drupal/lightning_media": "2.1.0",
         "drupal/lightning_workflow": "1.1.0",
+        "drupal/login_destination": "1.x-dev#54be8b8",
         "drupal/material_admin": "^1.0@alpha",
         "drupal/media_entity_audio": "2.0.0-alpha1",
         "drupal/responsive_favicons": "^1.4",
@@ -113,6 +114,10 @@
             "drupal/hide_revision_field": {
                 "2925788 - not working in drupal 8.4 with media":
                 "https://www.drupal.org/files/issues/hide_revision_field-2925788-2-not-working-in-drupal-8.4-with-media.patch"
+            },
+            "drupal/login_destination": {
+                "Array might be set but not have #links key present":
+                "./patches/login_destination-links-might-be-set.patch"
             }
         }
     }

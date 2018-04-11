@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cf11d47e147dbb3b217fd62cf37e2cb",
+    "content-hash": "d749480e0a090e2bade12255bd9b036e",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3603,6 +3603,87 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/lightning_workflow"
             }
+        },
+        {
+            "name": "drupal/login_destination",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/login_destination",
+                "reference": "54be8b8"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1514805485",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Array might be set but not have #links key present": "./patches/login_destination-links-might-be-set.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Huynh",
+                    "homepage": "https://www.drupal.org/user/243730"
+                },
+                {
+                    "name": "akashjain132",
+                    "homepage": "https://www.drupal.org/user/2622667"
+                },
+                {
+                    "name": "beautifulmind",
+                    "homepage": "https://www.drupal.org/user/219482"
+                },
+                {
+                    "name": "ddrozdik",
+                    "homepage": "https://www.drupal.org/user/574124"
+                },
+                {
+                    "name": "jng12",
+                    "homepage": "https://www.drupal.org/user/204316"
+                },
+                {
+                    "name": "marcp",
+                    "homepage": "https://www.drupal.org/user/20885"
+                },
+                {
+                    "name": "mithy",
+                    "homepage": "https://www.drupal.org/user/258911"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
+                },
+                {
+                    "name": "quantumized",
+                    "homepage": "https://www.drupal.org/user/61221"
+                },
+                {
+                    "name": "rsvelko",
+                    "homepage": "https://www.drupal.org/user/337401"
+                }
+            ],
+            "description": "The Login Destination module add possibility customize the destination that the user is redirected to after login.",
+            "homepage": "https://www.drupal.org/project/login_destination",
+            "support": {
+                "source": "http://cgit.drupalcode.org/login_destination"
+            },
+            "time": "2018-01-01T11:13:09+00:00"
         },
         {
             "name": "drupal/material_admin",
@@ -10907,6 +10988,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/login_destination": 20,
         "drupal/material_admin": 15,
         "drupal/smtp": 10,
         "drupal/votingapi_widgets": 20,

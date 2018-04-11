@@ -38,6 +38,7 @@ module:
   lightning_media_video: 0
   lightning_roles: 0
   link: 0
+  login_destination: 0
   media: 0
   media_entity_audio: 0
   media_entity_instagram: 0

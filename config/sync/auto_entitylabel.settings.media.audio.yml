@@ -1,5 +1,5 @@
 status: '1'
-pattern: 'New recording uploaded on [current-date:raw]'
+pattern: '"[media:field_associated_song]" from [media:field_associated_session]'
 php: 0
 escape: 0
 dependencies:
