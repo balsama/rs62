@@ -1,0 +1,7 @@
+allow_cancel_vote: false
+hide_vote_widget: false
+enabled_types:
+  media:
+    - audio
+_core:
+  default_config_hash: v8zOJVZLS-en7NcVdxnPvhRbnakYqCV9dd1eTRtPf-g

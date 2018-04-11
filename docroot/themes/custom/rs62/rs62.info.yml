@@ -20,5 +20,8 @@ regions:
 regions_hidden:
   - sidebar_first
 
+stylesheets-remove:
+  - modules/contrib/like_and_dislike/css/like_and_dislike.icons.css
+
 core: '8.x'
 project: 'rs62'
