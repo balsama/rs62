@@ -1,0 +1,127 @@
+diff --git a/src/Controller/VoteController.php b/src/Controller/VoteController.php
+index 849668a..9a1bd55 100644
+--- a/src/Controller/VoteController.php
++++ b/src/Controller/VoteController.php
+@@ -53,87 +53,50 @@ class VoteController extends ControllerBase implements ContainerInjectionInterfa
+       $opposite_vote_type_id = 'like';
+     }
+ 
+-    if (empty($user_votes)) {
+-      // Increment the value for requested vote type.
+-      $$vote_type_id++;
+-      $operation[$vote_type_id] = TRUE;
++    // Increment the value for requested vote type.
++    $$vote_type_id++;
++    $operation[$vote_type_id] = TRUE;
+ 
+-      // @todo: Moving it after vote creation wrongly returns empty array.
+-      // Get user votes for opposite vote type.
+-      $user_opposite_votes = $vote_storage->getUserVotes(
++    // @todo: Moving it after vote creation wrongly returns empty array.
++    // Get user votes for opposite vote type.
++    $user_opposite_votes = $vote_storage->getUserVotes(
++      $this->currentUser()->id(),
++      $opposite_vote_type_id,
++      $entity_type_id,
++      $entity_id
++    );
++
++    $vote_type = VoteType::load($vote_type_id);
++    $vote = Vote::create(['type' => $vote_type_id]);
++    $vote->setVotedEntityId($entity_id);
++    $vote->setVotedEntityType($entity_type_id);
++    $vote->setValueType($vote_type->getValueType());
++    $vote->setValue(1);
++    $vote->save();
++
++    // Remove the opposite vote, if any.
++    if (!empty($user_opposite_votes)) {
++      $vote_storage->deleteUserVotes(
+         $this->currentUser()->id(),
+         $opposite_vote_type_id,
+         $entity_type_id,
+         $entity_id
+       );
+-
+-      $vote_type = VoteType::load($vote_type_id);
+-      $vote = Vote::create(['type' => $vote_type_id]);
+-      $vote->setVotedEntityId($entity_id);
+-      $vote->setVotedEntityType($entity_type_id);
+-      $vote->setValueType($vote_type->getValueType());
+-      $vote->setValue(1);
+-      $vote->save();
+-
+-      // Remove the opposite vote, if any.
+-      if (!empty($user_opposite_votes)) {
+-        $vote_storage->deleteUserVotes(
+-          $this->currentUser()->id(),
+-          $opposite_vote_type_id,
+-          $entity_type_id,
+-          $entity_id
+-        );
+-        // Remove opposite vote.
+-        $$opposite_vote_type_id--;
+-        $operation[$opposite_vote_type_id] = FALSE;
+-      }
+-
+-      // Clear the view builder's cache.
+-      $this->entityTypeManager()->getViewBuilder($entity_type_id)->resetCache([$entity]);
+-
+-      return new JsonResponse([
+-        'likes' => $like,
+-        'dislikes' => $dislike,
+-        'message_type' => 'status',
+-        'operation' => $operation,
+-        'message' => t('Your vote was added.'),
+-      ]);
++      // Remove opposite vote.
++      $$opposite_vote_type_id--;
++      $operation[$opposite_vote_type_id] = FALSE;
+     }
+-    else {
+-      if ($this->config('like_and_dislike.settings')->get('allow_cancel_vote')) {
+-        // Decrement the value for requested vote type.
+-        $$vote_type_id--;
+-        $operation[$vote_type_id] = FALSE;
+ 
+-        // Remove the vote.
+-        $vote_storage->deleteUserVotes(
+-          $this->currentUser()->id(),
+-          $vote_type_id,
+-          $entity_type_id,
+-          $entity_id
+-        );
+-        // Clear the view builder's cache.
+-        $this->entityTypeManager()->getViewBuilder($entity_type_id)->resetCache([$entity]);
++    // Clear the view builder's cache.
++    $this->entityTypeManager()->getViewBuilder($entity_type_id)->resetCache([$entity]);
+ 
+-        return new JsonResponse([
+-          'likes' => $like,
+-          'dislikes' => $dislike,
+-          'operation' => $operation,
+-          'message_type' => 'status',
+-          'message' => t('Your vote was canceled.'),
+-        ]);
+-      }
+-      else {
+-        // User is not allowed to cancel his vote.
+-        return new JsonResponse([
+-          'likes' => $like,
+-          'dislikes' => $dislike,
+-          'operation' => $operation,
+-          'message_type' => 'warning',
+-          'message' => t('You are not allowed to vote the same way multiple times.'),
+-        ]);
+-      }
+-    }
++    return new JsonResponse([
++      'likes' => $like,
++      'dislikes' => $dislike,
++      'message_type' => 'status',
++      'operation' => $operation,
++      'message' => t('Your vote was added.'),
++    ]);
+   }
+ 
+   /**

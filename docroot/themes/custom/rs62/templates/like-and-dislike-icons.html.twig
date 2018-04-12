@@ -18,15 +18,17 @@
 <div class="vote-widget vote-widget--like-and-dislike">
   {% for type, icon in icons %}
     {% if icon.label == 'Like' %}
-      {% set maicon = 'plus_one' %}
-    {% else %}
-      {% set maicon = 'exposure_neg_1' %}
-    {% endif %}
-    <div class="vote-{{ type }} type-{{ entity_type }}" id="{{ type }}-container-{{ entity_type }}-{{ entity_id }}">
-      <div class="btn-floating btn-small waves-effect waves-light teal darken-1 pulse">
-        <a {{ icon.attributes }}><i class="material-icons">{{ maicon }}</i></a>
+      {% set maicon = 'favorite' %}
+      <div class="left vote-{{ type }} type-{{ entity_type }}" id="{{ type }}-container-{{ entity_type }}-{{ entity_id }}">
+        <a {{ icon.attributes }}>
+          <div class="btn-floating btn-small waves-effect waves-purple deep-orange">
+            <i class="material-icons">{{ maicon }}</i>
+          </div>
+        </a>
+        <span class="count badge">{{ icon.count }}</span>
       </div>
-      <span class="count">{{ icon.count }}</span>
-    </div>
+    {% else %}
+      {% set maicon = 'mood_bad' %}
+    {% endif %}
   {% endfor %}
 </div>

@@ -118,6 +118,10 @@
             "drupal/better_exposed_filters": {
                 "2936892 - Undefined index #options when $form['sort_order'] is exposed as Radios":
                 "https://www.drupal.org/files/issues/2018-04-07/0002-Fix-undefined-index-options-when-sort_order-is-expos.patch"
+            },
+            "drupal/like_and_dislike": {
+                "Allow multiple votes":
+                "./patches/like_and_dislike--allow-immediate-revote.patch"
             }
         }
     }
