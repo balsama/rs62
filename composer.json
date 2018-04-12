@@ -47,6 +47,7 @@
         "drupal/lightning_layout": "^1.1",
         "drupal/lightning_media": "2.1.0",
         "drupal/lightning_workflow": "1.1.0",
+        "drupal/like_and_dislike": "1.0.0-alpha3",
         "drupal/login_destination": "1.x-dev#54be8b8",
         "drupal/material_admin": "^1.0@alpha",
         "drupal/media_entity_audio": "2.0.0-alpha1",
@@ -55,7 +56,6 @@
         "drupal/token": "^1.1",
         "drupal/views_fieldsets": "^3.3",
         "drupal/votingapi": "3.0.0-alpha6",
-        "drupal/votingapi_widgets": "1.x-dev#4aa50d00ad3928cd90eb1f922956b9f46ab18f2c",
         "drupal/zen": "^7.0@alpha",
         "drupal/zurb_foundation": "^5.0@beta",
         "webflo/drupal-finder": "^1.0.0",
@@ -103,10 +103,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/votingapi_widgets": {
-                "Fix unloadable class const":
-                "./patches/unloadable-class-const.patch"
-            },
             "drupal/votingapi": {
                 "Allow immediate revoting":
                 "./patches/immediate-rollover.patch"
@@ -118,6 +114,14 @@
             "drupal/login_destination": {
                 "Array might be set but not have #links key present":
                 "./patches/login_destination-links-might-be-set.patch"
+            },
+            "drupal/better_exposed_filters": {
+                "2936892 - Undefined index #options when $form['sort_order'] is exposed as Radios":
+                "https://www.drupal.org/files/issues/2018-04-07/0002-Fix-undefined-index-options-when-sort_order-is-expos.patch"
+            },
+            "drupal/like_and_dislike": {
+                "Allow multiple votes":
+                "./patches/like_and_dislike--allow-immediate-revote.patch"
             }
         }
     }

@@ -14,11 +14,13 @@ dependencies:
     - better_exposed_filters
     - datetime
     - file
+    - like_and_dislike
     - media
     - node
     - taxonomy
     - user
     - views_fieldsets
+    - votingapi
 id: recordings
 label: Recordings
 module: views
@@ -56,7 +58,7 @@ display:
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           input_required: false
@@ -67,6 +69,21 @@ display:
               secondary_label: 'Advanced options'
               autosubmit: false
               autosubmit_hide: false
+            sort:
+              bef_format: bef
+              advanced:
+                collapsible: false
+                collapsible_label: 'Sort options'
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                is_secondary: false
+            title:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                placeholder_text: 'Song name contains...'
             field_musicians_target_id:
               bef_format: default
               more_options:
@@ -75,15 +92,16 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            title:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: 'Song name contains...'
             field_session_date_value:
               bef_format: bef_datepicker
               more_options:
                 is_secondary: false
+            field_original_artist_target_id:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
           text_input_required_format: rich_text
       pager:
         type: mini
@@ -201,7 +219,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<div class="btn-floating btn-small waves-effect waves-light red left"><i class="material-icons">exit_to_app</i></div>'
+            text: '<div class="btn-floating btn-small waves-effect waves-light red left horizontal direction-top direction-right tooltipped" data-position="right" data-tooltip="Song details"><i class="material-icons">exit_to_app</i></div>'
             make_link: false
             path: ''
             absolute: false
@@ -356,6 +374,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           fields:
+            - like_and_dislike
             - field_musicians
             - field_media_audio_file
             - view_node
@@ -367,6 +386,56 @@ display:
           collapsible: 0
           collapsed: 0
           plugin_id: fieldset
+        like_and_dislike:
+          id: like_and_dislike
+          table: media
+          field: like_and_dislike
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: media
+          plugin_id: like_and_dislike
         field_musicians:
           id: field_musicians
           table: node__field_musicians
@@ -891,11 +960,25 @@ display:
           group_type: group
           admin_label: ''
           order: ASC
-          exposed: false
+          exposed: true
           expose:
-            label: ''
+            label: Title
           entity_type: node
           entity_field: title
+          plugin_id: standard
+        value:
+          id: value
+          table: votingapi_result
+          field: value
+          relationship: media_vote_result_vote_count_like
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: true
+          expose:
+            label: 'Most liked'
+          entity_type: vote_result
+          entity_field: value
           plugin_id: standard
       title: Recordings
       header: {  }
@@ -920,6 +1003,16 @@ display:
           admin_label: 'Associated Session'
           required: false
           plugin_id: standard
+        media_vote_result_vote_count_like:
+          id: media_vote_result_vote_count_like
+          table: media_field_data
+          field: media_vote_result_vote_count_like
+          relationship: none
+          group_type: group
+          admin_label: 'Vote Result "Count" for media items: Like vote'
+          required: false
+          entity_type: media
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       use_ajax: false
@@ -935,6 +1028,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
         - user
         - user.permissions
       tags:
@@ -961,6 +1055,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
         - user
         - user.permissions
       tags:

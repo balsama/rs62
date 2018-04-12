@@ -25,9 +25,9 @@ panels_ipe: 4.2.0
 panelizer: 4.0.0
 panelizer_quickedit: 4.0.0
 lightning_layout: 1.1.0
-votingapi: 0.0.0
+votingapi: 3.0.0-alpha6
 vud: 0.0.0
-votingapi_widgets: 1.0.0-alpha3
+votingapi_widgets: 0.0.0
 pathauto: 1.1.0
 better_exposed_filters: 3.0.0-alpha3
 google_analytics: 2.2.0
@@ -46,3 +46,4 @@ components: 1.0.0
 views_fieldsets: 3.3.0
 smtp: 1.0.0-beta3
 login_destination: 0.0.0
+like_and_dislike: 1.0.0-alpha3

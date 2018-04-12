@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d749480e0a090e2bade12255bd9b036e",
+    "content-hash": "3b1c2fe686b9f1a84186d47419b0bc46",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -69,17 +69,6 @@
                 "zip"
             ],
             "time": "2016-11-03T16:10:31+00:00"
-        },
-        {
-            "name": "antennaio/jquery-bar-rating",
-            "version": "1.2.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "drupal-library"
         },
         {
             "name": "asm89/stack-cors",
@@ -1408,6 +1397,9 @@
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "2936892 - Undefined index #options when $form['sort_order'] is exposed as Radios": "https://www.drupal.org/files/issues/2018-04-07/0002-Fix-undefined-index-options-when-sort_order-is-expos.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3605,6 +3597,69 @@
             }
         },
         {
+            "name": "drupal/like_and_dislike",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/like_and_dislike",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/like_and_dislike-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "9568ac7cf2a6639ad79fa47efc119689dc410c80"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/votingapi": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1519314784",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Allow multiple votes": "./patches/like_and_dislike--allow-immediate-revote.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "adriancid",
+                    "homepage": "https://www.drupal.org/user/1962106"
+                },
+                {
+                    "name": "pedrorocha",
+                    "homepage": "https://www.drupal.org/user/218937"
+                }
+            ],
+            "description": "Like & Dislike",
+            "homepage": "http://drupal.org/project/like_and_dislike",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/like_and_dislike",
+                "issues": "http://drupal.org/project/issues/like_and_dislike"
+            }
+        },
+        {
             "name": "drupal/login_destination",
             "version": "dev-1.x",
             "source": {
@@ -4844,65 +4899,6 @@
                 "source": "http://cgit.drupalcode.org/votingapi",
                 "issues": "http://drupal.org/project/issues/votingapi"
             }
-        },
-        {
-            "name": "drupal/votingapi_widgets",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/votingapi_widgets",
-                "reference": "4aa50d00ad3928cd90eb1f922956b9f46ab18f2c"
-            },
-            "require": {
-                "antennaio/jquery-bar-rating": "1.2.2",
-                "drupal/core": "~8.0",
-                "drupal/votingapi": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha3+53-dev",
-                    "datestamp": "1522139285",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                },
-                "patches_applied": {
-                    "Fix unloadable class const": "./patches/unloadable-class-const.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Andre-B",
-                    "homepage": "https://www.drupal.org/user/1772408"
-                },
-                {
-                    "name": "Erik Seifert",
-                    "homepage": "https://www.drupal.org/user/161429"
-                },
-                {
-                    "name": "Merlin Tribukait",
-                    "homepage": "https://www.drupal.org/user/3217075"
-                }
-            ],
-            "description": "Voting API Widgets",
-            "homepage": "https://www.drupal.org/project/votingapi_widgets",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/votingapi_widgets",
-                "issues": "https://www.drupal.org/project/issues/votingapi_widgets"
-            },
-            "time": "2018-03-27T14:06:23+00:00"
         },
         {
             "name": "drupal/zen",
@@ -10991,7 +10987,6 @@
         "drupal/login_destination": 20,
         "drupal/material_admin": 15,
         "drupal/smtp": 10,
-        "drupal/votingapi_widgets": 20,
         "drupal/zen": 15,
         "drupal/zurb_foundation": 10,
         "acquia/lightning_dev": 20
