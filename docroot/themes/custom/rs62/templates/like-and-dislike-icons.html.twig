@@ -19,13 +19,13 @@
   {% for type, icon in icons %}
     {% if icon.label == 'Like' %}
       {% set maicon = 'favorite' %}
-      <div class="left vote-{{ type }} type-{{ entity_type }}" id="{{ type }}-container-{{ entity_type }}-{{ entity_id }}">
+      <div class="right vote-{{ type }} type-{{ entity_type }} tooltipped" id="{{ type }}-container-{{ entity_type }}-{{ entity_id }}" data-position="bottom" data-tooltip="Tap as many time as you like.">
         <a {{ icon.attributes }}>
           <div class="btn-floating btn-small waves-effect waves-purple deep-orange">
             <i class="material-icons">{{ maicon }}</i>
           </div>
         </a>
-        <span class="count badge">{{ icon.count }}</span>
+        <span class="count chip">{{ icon.count }}</span>
       </div>
     {% else %}
       {% set maicon = 'mood_bad' %}
