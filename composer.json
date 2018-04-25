@@ -44,6 +44,7 @@
         "drupal/core": "~8.5.0",
         "drupal/google_analytics": "^2.2",
         "drupal/hide_revision_field": "^1.1",
+        "drupal/lightning_core": "2.4.0",
         "drupal/lightning_layout": "^1.1",
         "drupal/lightning_media": "2.1.0",
         "drupal/lightning_workflow": "1.1.0",
