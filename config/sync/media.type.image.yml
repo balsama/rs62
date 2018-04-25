@@ -1,7 +1,16 @@
 uuid: 969c4782-81e4-482c-b185-c72643a1c297
 langcode: und
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - hide_revision_field
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      57:
+        hide: false
+      58:
+        hide: false
 _core:
   default_config_hash: UbLy1_yBV5jSxil0-k8gV9GiVUg3Oik3hlAJzqeT8YQ
 id: image

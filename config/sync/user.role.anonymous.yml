@@ -20,3 +20,4 @@ permissions:
   - 'use text format restricted_html'
   - 'view media'
   - 'view revision field'
+  - 'view the administration theme'

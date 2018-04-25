@@ -3,7 +3,15 @@ langcode: und
 status: true
 dependencies:
   module:
+    - hide_revision_field
     - media_entity_twitter
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      57:
+        hide: false
+      58:
+        hide: false
 _core:
   default_config_hash: JJfzQKRxzJtlEzDVMBiB9pz9RAilNURCbnSgFrHJUxw
 id: tweet

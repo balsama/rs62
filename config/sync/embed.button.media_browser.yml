@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   content:
-    - 'file:file:4dd8a5bc-cfc9-48db-99dc-9c4f2c352081'
+    - 'file:file:13911e4e-b719-47a0-93c4-787a8735b3dd'
   module:
     - entity_embed
     - image
@@ -22,4 +22,4 @@ type_settings:
   entity_browser: media_browser
   entity_browser_settings:
     display_review: false
-icon_uuid: 4dd8a5bc-cfc9-48db-99dc-9c4f2c352081
+icon_uuid: 13911e4e-b719-47a0-93c4-787a8735b3dd

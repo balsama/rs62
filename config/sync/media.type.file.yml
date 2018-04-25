@@ -1,7 +1,16 @@
 uuid: 409c8880-50e8-4989-bad6-47300c089d71
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - hide_revision_field
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      57:
+        hide: false
+      58:
+        hide: false
 _core:
   default_config_hash: s6qJnINiq7zI-ZoQOXM_gtiDpIsHT3fm7RySP1F_BE0
 id: file

@@ -3,7 +3,15 @@ langcode: und
 status: true
 dependencies:
   module:
+    - hide_revision_field
     - media_entity_instagram
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      57:
+        hide: false
+      58:
+        hide: false
 _core:
   default_config_hash: TKhdB_RfDh650Ek88BYOONs44QmJbbQGAEETcF-CEjo
 id: instagram
