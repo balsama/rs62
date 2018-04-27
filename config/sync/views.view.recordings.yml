@@ -980,6 +980,19 @@ display:
           entity_type: vote_result
           entity_field: value
           plugin_id: standard
+        field_session_date_value:
+          id: field_session_date_value
+          table: node__field_session_date
+          field: field_session_date_value
+          relationship: field_associated_session
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
       title: Recordings
       header: {  }
       footer: {  }
