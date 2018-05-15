@@ -23,4 +23,3 @@ permissions:
   - 'use text format basic_html'
   - 'use text format rich_text'
   - 'view media'
-  - 'view the administration theme'

@@ -22,3 +22,4 @@ permissions:
   - 'use text format rich_text'
   - 'view own unpublished content'
   - 'view session revisions'
+  - 'view the administration theme'

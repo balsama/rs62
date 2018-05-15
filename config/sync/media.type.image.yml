@@ -11,6 +11,12 @@ third_party_settings:
         hide: false
       58:
         hide: false
+      60:
+        hide: false
+      59:
+        hide: false
+      62:
+        hide: false
 _core:
   default_config_hash: UbLy1_yBV5jSxil0-k8gV9GiVUg3Oik3hlAJzqeT8YQ
 id: image

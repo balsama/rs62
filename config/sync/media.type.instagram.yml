@@ -12,6 +12,12 @@ third_party_settings:
         hide: false
       58:
         hide: false
+      60:
+        hide: false
+      59:
+        hide: false
+      62:
+        hide: false
 _core:
   default_config_hash: TKhdB_RfDh650Ek88BYOONs44QmJbbQGAEETcF-CEjo
 id: instagram

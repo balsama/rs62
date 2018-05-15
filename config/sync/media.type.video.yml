@@ -12,6 +12,12 @@ third_party_settings:
         hide: false
       58:
         hide: false
+      60:
+        hide: false
+      59:
+        hide: false
+      62:
+        hide: false
 _core:
   default_config_hash: CDRaWPhGJXLhi1p3SiKLfu8Qq7S8OB3oG3DroYiiDjk
 id: video

@@ -7,7 +7,6 @@ label: 'Homepage (Session) always'
 triggers:
   registration: registration
   login: login
-  one-time-login: one-time-login
   logout: logout
 destination_path: 'internal:/'
 pages_type: 0
