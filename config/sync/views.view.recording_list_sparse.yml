@@ -67,9 +67,9 @@ display:
           table: node__field_assoc_recordings_from_song
           field: delta
           relationship: field_associated_song
-          group_type: group
+          group_type: max
           admin_label: ''
-          label: ''
+          label: 'Associated Recordings (field_assoc_recordings_from_song:delta)'
           exclude: true
           alter:
             alter_text: false
@@ -102,14 +102,14 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
           hide_empty: true
           empty_zero: true
-          hide_alter_empty: true
+          hide_alter_empty: false
           set_precision: false
           precision: 0
           decimal: .
@@ -181,6 +181,13 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
           plugin_id: field
         field_media_audio_file:
           id: field_media_audio_file
@@ -234,7 +241,7 @@ display:
           type: file_audio
           settings:
             use_description_as_link_text: 1
-          group_column: ''
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -594,6 +601,7 @@ display:
           not: false
           plugin_id: numeric
       display_extenders: {  }
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
