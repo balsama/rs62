@@ -36,6 +36,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: 1DOWWQCf9RT-KOigclqslxmujlvMK2M9xJnzaLcDX3o
 id: media.instagram.thumbnail

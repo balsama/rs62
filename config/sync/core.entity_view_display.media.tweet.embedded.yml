@@ -33,6 +33,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: 576jZt8I-8Q1YDaS7WRwUEkAFKl2XEXG9X6aS00uiEc
 id: media.tweet.embedded

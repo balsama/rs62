@@ -34,6 +34,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: FGDcC__SDFv-9J0bOZYpGLVXKr2uIoXpNJOg8yLD7mU
 id: media.instagram.default

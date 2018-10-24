@@ -41,13 +41,12 @@
         "drupal/cer": "4.0.0-alpha2",
         "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~8.5.0",
         "drupal/google_analytics": "^2.2",
         "drupal/hide_revision_field": "^1.1",
-        "drupal/lightning_core": "2.8.0",
+        "drupal/lightning_core": "3.2.0",
         "drupal/lightning_layout": "^1.1",
-        "drupal/lightning_media": "2.1.0",
-        "drupal/lightning_workflow": "1.1.0",
+        "drupal/lightning_media": "3.1.0",
+        "drupal/lightning_workflow": "3.1.0",
         "drupal/like_and_dislike": "1.0.0-alpha3",
         "drupal/login_destination": "1.x-dev#54be8b8",
         "drupal/material_admin": "^1.0@alpha",
@@ -115,10 +114,6 @@
             "drupal/login_destination": {
                 "Array might be set but not have #links key present":
                 "./patches/login_destination-links-might-be-set.patch"
-            },
-            "drupal/better_exposed_filters": {
-                "2936892 - Undefined index #options when $form['sort_order'] is exposed as Radios":
-                "https://www.drupal.org/files/issues/2018-04-07/0002-Fix-undefined-index-options-when-sort_order-is-expos.patch"
             },
             "drupal/like_and_dislike": {
                 "Allow multiple votes":

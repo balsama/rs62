@@ -105,6 +105,7 @@ third_party_settings:
             additional: {  }
             weight: 1
     allow_custom: false
+    enabled: true
 _core:
   default_config_hash: SWf3MLdbEKvlx4Vs6iPwDHu5pr1aKT0SJmgp8no73-k
 id: media.audio.full

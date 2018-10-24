@@ -36,6 +36,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: 7POQWMMGHaAd5G2_zxlo9bWG9g3LLLyKp0jUb6hvnHU
 id: media.tweet.thumbnail

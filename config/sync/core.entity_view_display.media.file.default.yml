@@ -32,6 +32,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: 9s0lWIanCnW5Xrrkmedxohs9F0yk4LO8ZcmVQ9xyuu4
 id: media.file.default
