@@ -1,0 +1,35 @@
+uuid: 0e53bac8-18c5-47ca-a889-df735ca6c19b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.audio.field_associated_session
+    - field.field.media.audio.field_associated_song
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_notes
+    - media.type.audio
+_core:
+  default_config_hash: 9XTn4CqOB0W8nLo5kOOaNqJAP63e2yQEzMtKttPrlVw
+id: media.audio.media_library
+targetEntityType: media
+bundle: audio
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_associated_session: true
+  field_associated_song: true
+  field_media_audio_file: true
+  field_notes: true
+  path: true
+  status: true
+  uid: true

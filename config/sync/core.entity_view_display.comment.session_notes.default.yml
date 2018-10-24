@@ -31,6 +31,27 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          a11de304-71df-40aa-832d-1025bcbfee50:
+            uuid: a11de304-71df-40aa-832d-1025bcbfee50
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:session_notes:links'
+            additional: {  }
+            weight: 1
+          c12c7a7f-50f2-455f-a277-6bcd35c03a76:
+            uuid: c12c7a7f-50f2-455f-a277-6bcd35c03a76
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:session_notes:links'
+            additional: {  }
+            weight: 2
+    enabled: true
 id: comment.session_notes.default
 targetEntityType: comment
 bundle: session_notes
@@ -46,4 +67,6 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

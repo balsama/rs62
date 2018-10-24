@@ -5,7 +5,7 @@ inline_entity_form: 1.0.0-beta1
 entity_embed: 1.0.0-beta2
 media: 8.5.0-rc1
 views_infinite_scroll: 0.0.0
-lightning_media: 2.0.0
+lightning_media: 3.1.0
 lightning_roles: 0.0.0
 media_entity_audio: 2.0.0-alpha1
 media_entity_spotify: 0.0.0
@@ -34,7 +34,7 @@ google_analytics: 2.2.0
 lightning_media_image: 2.1.0
 video_embed_field: 2.0.0-alpha2
 video_embed_media: 2.0.0-alpha2
-lightning_media_video: 2.1.0
+lightning_media_video: 2.4.0
 lightning_media_instagram: 2.1.0
 media_entity_twitter: 2.0.0-alpha2
 lightning_media_twitter: 2.1.0
@@ -47,3 +47,4 @@ views_fieldsets: 3.3.0
 smtp: 1.0.0-beta3
 login_destination: 0.0.0
 like_and_dislike: 1.0.0-alpha3
+media_library: 8.6.2

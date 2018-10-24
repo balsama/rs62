@@ -42,6 +42,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 _core:
   default_config_hash: ULSDSeb1LGUAS40ia_8qngabv0GTcJAaHGl67xDUNsA
 id: media.video.list

@@ -87,6 +87,7 @@ third_party_settings:
             additional: {  }
             weight: 3
     allow_custom: false
+    enabled: true
 _core:
   default_config_hash: ULSDSeb1LGUAS40ia_8qngabv0GTcJAaHGl67xDUNsA
 id: media.video.default

@@ -90,6 +90,7 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 2
+    enabled: true
 id: node.song.default
 targetEntityType: node
 bundle: song

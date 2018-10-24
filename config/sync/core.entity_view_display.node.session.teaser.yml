@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_comments
     - field.field.node.session.field_session_date
     - node.type.session
   module:
@@ -37,6 +38,27 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          d3a0c245-130f-4c94-b464-d6a6bcff8bf4:
+            uuid: d3a0c245-130f-4c94-b464-d6a6bcff8bf4
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:session:links'
+            additional: {  }
+            weight: 1
+          d1359339-de09-4fa6-a946-d22739c97cf8:
+            uuid: d1359339-de09-4fa6-a946-d22739c97cf8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:session:links'
+            additional: {  }
+            weight: 2
+    enabled: true
 id: node.session.teaser
 targetEntityType: node
 bundle: session
@@ -58,4 +80,5 @@ content:
 hidden:
   field_assoc_recordings_from_sess: true
   field_musicians: true
+  field_session_comments: true
   field_session_date: true

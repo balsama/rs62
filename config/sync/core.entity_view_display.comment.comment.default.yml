@@ -31,6 +31,27 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+          deed6cdf-a358-4a27-9ef2-07a5afd5f10c:
+            uuid: deed6cdf-a358-4a27-9ef2-07a5afd5f10c
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment:links'
+            additional: {  }
+            weight: 1
+          12044fd3-e54c-40cc-9d8f-5a7117dd8647:
+            uuid: 12044fd3-e54c-40cc-9d8f-5a7117dd8647
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:comment:comment:links'
+            additional: {  }
+            weight: 2
+    enabled: true
 _core:
   default_config_hash: 77Ye1kR-P6AaiGfEO8mnXNSr7nqtnP3PiiVBwJeGGMI
 id: comment.comment.default

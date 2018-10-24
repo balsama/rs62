@@ -30,6 +30,7 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
+    enabled: true
 id: taxonomy_term.musicians.default
 targetEntityType: taxonomy_term
 bundle: musicians
