@@ -43,8 +43,8 @@
         "drupal/console": "^1.0.2",
         "drupal/google_analytics": "^2.2",
         "drupal/hide_revision_field": "^1.1",
-        "drupal/lightning_core": "3.2.0",
-        "drupal/lightning_layout": "^1.1",
+        "drupal/lightning_core": "3.4.0",
+        "drupal/lightning_layout": "1.4.0",
         "drupal/lightning_media": "3.1.0",
         "drupal/lightning_workflow": "3.1.0",
         "drupal/like_and_dislike": "1.0.0-alpha3",
@@ -118,6 +118,10 @@
             "drupal/like_and_dislike": {
                 "Allow multiple votes":
                 "./patches/like_and_dislike--allow-immediate-revote.patch"
+            },
+            "drupal/material_admin": {
+                "2989199 - Fixing Array to String Notice for PHP 7.x":
+                "https://www.drupal.org/files/issues/2018-10-19/material_admin-array_to_string_notice-2989199-5-D8.patch"
             }
         }
     }
