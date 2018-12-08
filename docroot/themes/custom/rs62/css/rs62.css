@@ -1,37 +1,61 @@
 .card-content .highlight > .view-grouping-header {
   color: #ffab40;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+}
 
 .menu--main ul li {
-  list-style: none; }
-  .menu--main ul li a {
-    background-color: #f4f4f4;
-    display: block;
-    padding: 6px 12px; }
-    .menu--main ul li a:hover {
-      background-color: #e9e9e9; }
-  .menu--main ul li.menu-item--active-trail a {
-    background-color: #d6d6d6; }
+  list-style: none;
+}
+.menu--main ul li a {
+  background-color: #f4f4f4;
+  display: block;
+  padding: 6px 12px;
+}
+.menu--main ul li a:hover {
+  background-color: #e9e9e9;
+}
+.menu--main ul li.menu-item--active-trail a {
+  background-color: #d6d6d6;
+}
 @media all and (min-width: 600px) {
   .menu--main ul {
     clear: both;
-    display: block; }
-    .menu--main ul li {
-      float: left; }
-      .menu--main ul li a:hover {
-        text-decoration: none; }
-    .menu--main ul:after {
-      content: "";
-      clear: both;
-      display: table; } }
+    display: block;
+  }
+  .menu--main ul li {
+    float: left;
+  }
+  .menu--main ul li a:hover {
+    text-decoration: none;
+  }
+  .menu--main ul:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
 
 .menu--account {
   display: block;
-  float: right; }
-  .menu--account a {
-    color: white; }
+  float: right;
+}
+.menu--account a {
+  color: white;
+}
 
 .view-content .views-field-title h1.field-content {
-  color: #424242; }
+  color: #424242;
+}
+
+.indented {
+  border-left: 7px solid #eeeeee;
+  margin-left: 5px;
+  padding-left: 20px;
+}
+
+.js-comment > footer > p {
+  color: #616161;
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=rs62.css.map */
