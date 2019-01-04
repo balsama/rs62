@@ -15,4 +15,15 @@
   color: #424242;
 }
 
+.indented {
+  border-left: 7px solid #eeeeee;
+  margin-left: 5px;
+  padding-left: 20px;
+}
+
+.js-comment > footer > p {
+  color: #616161;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=rs62.css.map */
