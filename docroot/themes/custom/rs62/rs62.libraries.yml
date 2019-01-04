@@ -3,3 +3,4 @@ global-styling:
   css:
     base:
       css/rs62.css: {}
+      css/navbar.css: {}

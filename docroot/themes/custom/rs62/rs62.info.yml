@@ -8,6 +8,7 @@ libraries:
   - rs62/global-styling
 
 regions:
+  nav: Nav
   header: 'Header'
   pre_content: 'Pre-content'
   breadcrumb: Breadcrumb
