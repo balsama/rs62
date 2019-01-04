@@ -118,7 +118,8 @@ nav.nav--main {
       float: left;
       padding: 0;
 
-      &.active {
+      &.active,
+      &.menu-item--active-trail {
         background-color: rgba(0,0,0,.1);
       }
     }

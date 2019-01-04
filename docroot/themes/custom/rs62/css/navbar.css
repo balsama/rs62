@@ -2234,7 +2234,7 @@ nav.nav--main ul li {
   float: left;
   padding: 0;
 }
-nav.nav--main ul li.active {
+nav.nav--main ul li.active, nav.nav--main ul li.menu-item--active-trail {
   background-color: rgba(0, 0, 0, 0.1);
 }
 nav.nav--main ul a {
