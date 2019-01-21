@@ -43,10 +43,10 @@
         "drupal/console": "^1.0.2",
         "drupal/google_analytics": "^2.2",
         "drupal/hide_revision_field": "^1.1",
-        "drupal/lightning_core": "3.4.0",
-        "drupal/lightning_layout": "1.4.0",
-        "drupal/lightning_media": "3.1.0",
-        "drupal/lightning_workflow": "3.1.0",
+        "drupal/lightning_core": "3.5.0",
+        "drupal/lightning_layout": "1.6.0",
+        "drupal/lightning_media": "3.5.0",
+        "drupal/lightning_workflow": "3.3.0",
         "drupal/like_and_dislike": "1.0.0-alpha3",
         "drupal/login_destination": "1.x-dev#54be8b8",
         "drupal/material_admin": "^1.0@alpha",
@@ -70,7 +70,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.0.8"
+        },
+        "preferred-install": {
+            "drupal/core": "dist"
+        }
     },
     "autoload": {
         "classmap": [

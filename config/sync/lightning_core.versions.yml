@@ -34,7 +34,7 @@ google_analytics: 2.2.0
 lightning_media_image: 2.1.0
 video_embed_field: 2.0.0-alpha2
 video_embed_media: 2.0.0-alpha2
-lightning_media_video: 2.4.0
+lightning_media_video: 3.5.0
 lightning_media_instagram: 2.1.0
 media_entity_twitter: 2.0.0-alpha2
 lightning_media_twitter: 2.1.0
