@@ -70,7 +70,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.0.8"
+        },
+        "preferred-install": {
+            "drupal/core": "dist"
+        }
     },
     "autoload": {
         "classmap": [
