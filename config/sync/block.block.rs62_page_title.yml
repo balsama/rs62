@@ -9,7 +9,7 @@ _core:
 id: rs62_page_title
 theme: rs62
 region: header
-weight: -3
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

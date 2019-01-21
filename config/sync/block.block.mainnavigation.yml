@@ -10,7 +10,7 @@ dependencies:
     - rs62
 id: mainnavigation
 theme: rs62
-region: header
+region: nav
 weight: -5
 provider: null
 plugin: 'system_menu_block:main'
