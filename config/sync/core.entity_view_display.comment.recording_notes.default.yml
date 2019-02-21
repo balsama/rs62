@@ -31,16 +31,6 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          18acb819-cdbd-410e-82e3-490b6fafbe7d:
-            uuid: 18acb819-cdbd-410e-82e3-490b6fafbe7d
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:comment:recording_notes:links'
-            additional: {  }
-            weight: 1
           5af9e49a-a67e-4265-8b63-f6141b51773b:
             uuid: 5af9e49a-a67e-4265-8b63-f6141b51773b
             region: content
