@@ -1,4 +1,4 @@
-uuid: 8b6e98e6-ed51-4bbd-95f2-2f149c037b9b
+uuid: 9c413e72-cf1c-416d-9ec1-b99538f8ab7c
 langcode: en
 status: true
 dependencies:
@@ -6,14 +6,14 @@ dependencies:
     - lightning_media
 _core:
   default_config_hash: kT3o2OhRMWgZX6kGxRYSsItntaw241e3UwpGCD3RpJE
-name: media_browser
-label: 'Media browser'
-display: modal
+name: ckeditor_media_browser
+label: 'Media browser (CKEditor)'
+display: iframe
 display_configuration:
-  width: ''
-  height: ''
-  link_text: 'Add media'
-  auto_open: false
+  width: 100%
+  height: '640'
+  link_text: 'Select entities'
+  auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
