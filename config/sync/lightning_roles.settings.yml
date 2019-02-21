@@ -18,6 +18,7 @@ content_roles:
       - 'administer panelizer node ? content'
       - 'administer panelizer node ? layout'
       - 'access image_browser entity browser pages'
+      - 'access ckeditor_media_browser entity browser pages'
   reviewer:
     enabled: true
     label: '? reviewer'

@@ -14,12 +14,12 @@ label: 'Media browser'
 id: media_browser
 type_id: entity
 type_settings:
+  entity_browser: ckeditor_media_browser
   entity_type: media
   bundles: {  }
   display_plugins:
     - 'view_mode:media.embedded'
     - media_image
-  entity_browser: media_browser
   entity_browser_settings:
     display_review: false
 icon_uuid: 13911e4e-b719-47a0-93c4-787a8735b3dd
