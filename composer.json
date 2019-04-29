@@ -3,33 +3,23 @@
     "description": "Codebase for rs62.live website.",
     "type": "project",
     "license": "GPL-2.0-or-later",
-    "repositories": [
-        {
+    "repositories": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        {
+        "assets": {
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
-        {
-            "type": "vcs",
-            "url": "https://github.com/acquia/lightning-dev"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "antennaio/jquery-bar-rating",
-                "version": "1.2.2",
-                "type": "drupal-library",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
-                }
-            }
+        "dev": {
+            "type": "github",
+            "url": "https://github.com/acquia/lightning-dev",
+            "no-api": true
         }
-    ],
+    },
     "require": {
+        "acquia/lightning_dev": "dev-phpunit-6",
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
@@ -41,10 +31,11 @@
         "drupal/cer": "4.0.0-alpha2",
         "drupal/components": "^1.0",
         "drupal/console": "^1.0.2",
+        "drupal/core": "8.6.10",
         "drupal/google_analytics": "^2.2",
         "drupal/hide_revision_field": "^1.1",
-        "drupal/lightning_layout": "1.6.0",
         "drupal/lightning_core": "3.7.0",
+        "drupal/lightning_layout": "1.6.0",
         "drupal/lightning_media": "3.6.0",
         "drupal/lightning_workflow": "3.4.0",
         "drupal/like_and_dislike": "1.0.0-alpha3",
@@ -58,11 +49,11 @@
         "drupal/votingapi": "3.0.0-alpha6",
         "drupal/zen": "^7.0@alpha",
         "drupal/zurb_foundation": "^5.0@beta",
+        "joachim-n/composer-manifest": "^1.0",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
-        "acquia/lightning_dev": "dev-8.x-1.x"
     },
     "conflict": {
         "drupal/drupal": "*"
