@@ -88,6 +88,11 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "fixture:create": "DATE=`date +%d-%b-%g-%H%M` && drush sql:dump --result-file ../fixtures/$DATE.sql --gzip",
+        "fixture:restore": [
+            "echo -ne I don't what the file name is and I can't take arguments! So here is the command you should use:",
+            "echo \"gunzip ./fixtures/NAME.sql.gz --keep && drush sql-cli < ./fixtures/NAME.sql && rm ./fixtures/NAME.sql\""
         ]
     },
     "extra": {
