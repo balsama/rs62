@@ -5,5 +5,4 @@ dependencies: {  }
 name: Musicians
 vid: musicians
 description: 'People on a recording.'
-hierarchy: 0
 weight: 0

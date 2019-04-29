@@ -7,5 +7,4 @@ _core:
 name: 'Free Tags'
 vid: tags
 description: 'Any other tags that this song or content should be grouped under.'
-hierarchy: 0
 weight: 0
