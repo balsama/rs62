@@ -48,3 +48,5 @@ smtp: 1.0.0-beta3
 login_destination: 0.0.0
 like_and_dislike: 1.0.0-alpha3
 media_library: 8.6.2
+devel_generate: 1.2.0
+lightning_dev: 2.x-dev

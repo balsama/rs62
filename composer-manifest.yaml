@@ -200,7 +200,6 @@ packages:
     symfony/yaml: v3.4.26
     textalk/websocket: 1.2.0
     theseer/tokenizer: 1.1.2
-    twig/twig: v1.37.1
     typo3/phar-stream-wrapper: v2.1.0
     vardot/blazy: 1.8.2.1
     webflo/drupal-finder: 1.1.0
@@ -210,3 +209,4 @@ packages:
     zendframework/zend-escaper: 2.6.0
     zendframework/zend-feed: 2.12.0
     zendframework/zend-stdlib: 3.2.1
+    twig/twig: v1.37.1
