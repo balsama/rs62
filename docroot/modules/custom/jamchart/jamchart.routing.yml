@@ -1,0 +1,15 @@
+jamchart.jamchart:
+  path: '/jamchart'
+  defaults:
+    _controller: '\Drupal\jamchart\Controller\JamchartController::jamChart'
+    _title: 'JamChart'
+  requirements:
+    _permission: 'access content'
+
+jamchart_chartdata.script:
+  path: '/jamchart/jamchart_chartdata.js'
+  defaults:
+    _controller: '\Drupal\jamchart\Controller\AssetController::script'
+    _title: 'jamchart_chartdata'
+  requirements:
+    _permission: 'access content'

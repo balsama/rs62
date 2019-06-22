@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.song.body
     - field.field.node.song.field_assoc_recordings_from_song
     - field.field.node.song.field_original_artist
+    - field.field.node.song.field_video
     - node.type.song
   module:
     - text
@@ -44,6 +45,7 @@ content:
 hidden:
   created: true
   field_assoc_recordings_from_song: true
+  field_video: true
   path: true
   promote: true
   status: true

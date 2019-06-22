@@ -1,0 +1,5 @@
+name: 'jamchart'
+type: module
+description: 'Chart of how often we jam'
+core: 8.x
+package: 'Custom'
