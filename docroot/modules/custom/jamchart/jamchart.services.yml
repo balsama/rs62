@@ -1,0 +1,8 @@
+services:
+  jamchart.route_subscriber:
+    class: Drupal\jamchart\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  jamchart.asset_controller:
+    class: Drupal\jamchart\Controller\AssetController
+    arguments: ['@http_client']

@@ -1,0 +1,6 @@
+jamchart:
+  version: 1.x
+  header: true
+  js:
+    https://www.gstatic.com/charts/loader.js: {type: external}
+    jamchart_chartdata: {type: dynamic, route: jamchart_chartdata.script}

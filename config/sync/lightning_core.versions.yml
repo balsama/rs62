@@ -50,3 +50,17 @@ like_and_dislike: 1.0.0-alpha3
 media_library: 8.6.2
 devel_generate: 1.2.0
 lightning_dev: 2.x-dev
+serialization: 8.7.3
+jsonapi: 0.0.0
+consumers: 1.9.0
+schemata: 1.0.0-beta1
+schemata_json_schema: 1.0.0-beta1
+openapi: 1.0.0-beta3
+openapi_ui: 1.0.0-rc2
+openapi_ui_redoc: 1.0.0-rc2
+openapi_ui_swagger: 1.0.0-rc3
+simple_oauth: 3.16.0
+simple_oauth_extras: 3.16.0
+lightning_api: 4.2.0
+jamchart: 0.0.0
+dynamic_asset: 1.0.0

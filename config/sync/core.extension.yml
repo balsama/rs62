@@ -11,12 +11,14 @@ module:
   comment: 0
   components: 0
   config: 0
+  consumers: 0
   contextual: 0
   ctools: 0
   ctools_block: 0
   datetime: 0
   dblog: 0
   devel_generate: 0
+  dynamic_asset: 0
   dynamic_page_cache: 0
   editor: 0
   embed: 0
@@ -31,9 +33,12 @@ module:
   history: 0
   image: 0
   inline_entity_form: 0
+  jamchart: 0
+  jsonapi: 0
   layout_builder: 0
   layout_discovery: 0
   libraries: 0
+  lightning_api: 0
   lightning_core: 0
   lightning_dev: 0
   lightning_media: 0
@@ -53,12 +58,21 @@ module:
   media_library: 0
   menu_ui: 0
   node: 0
+  openapi: 0
+  openapi_ui: 0
+  openapi_ui_redoc: 0
+  openapi_ui_swagger: 0
   options: 0
   page_cache: 0
   path: 0
   quickedit: 0
   rdf: 0
   responsive_favicons: 0
+  schemata: 0
+  schemata_json_schema: 0
+  serialization: 0
+  simple_oauth: 0
+  simple_oauth_extras: 0
   slick: 0
   slick_entityreference: 0
   smtp: 0

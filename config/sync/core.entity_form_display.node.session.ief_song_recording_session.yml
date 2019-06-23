@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_assoc_recordings_from_sess
     - field.field.node.session.field_musicians
+    - field.field.node.session.field_session_comments
     - field.field.node.session.field_session_date
     - node.type.session
   module:
@@ -44,6 +45,7 @@ content:
 hidden:
   created: true
   field_assoc_recordings_from_sess: true
+  field_session_comments: true
   path: true
   promote: true
   status: true
