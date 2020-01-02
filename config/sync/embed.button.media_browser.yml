@@ -2,8 +2,9 @@ uuid: 2ddc03af-0ac4-4295-9514-b1cba797bdb7
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'file:file:13911e4e-b719-47a0-93c4-787a8735b3dd'
+  config:
+    - core.entity_view_mode.media.embedded
+    - entity_browser.browser.ckeditor_media_browser
   module:
     - entity_embed
     - image
@@ -22,4 +23,7 @@ type_settings:
     - media_image
   entity_browser_settings:
     display_review: false
-icon_uuid: 13911e4e-b719-47a0-93c4-787a8735b3dd
+icon:
+  data: ''
+  uri: 'public://embed_buttons/AVES-thumbnail-300x300.png'
+icon_uuid: null
